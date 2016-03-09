@@ -5,7 +5,7 @@ from SARS.models import UserProfile
 
 class QueryForm(forms.ModelForm):
     query = forms.CharField(max_length=128, help_text="Enter query:")
-    print query
+    #print query
 
     class Meta:
         model = Query

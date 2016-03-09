@@ -11,6 +11,10 @@ def query_construction(request):
     form = QueryForm()
     return render(request, 'SARS/query_construction.html',{'form':form})
 
+def abstract_evaluation(request):
+    printQuery = request.POST.get('query')
+    return HttpResponse(printQuery)
+    
 def register(request):
 
     # A boolean value for telling the template whether the registration was successful.

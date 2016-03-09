@@ -4,7 +4,7 @@
     {% block body_block %}
         <h1>Construct a query</h1>
 
-        <form id="query_form" method="post" action="/SARS/query_construction/">
+        <form id="query_form" method="post" action="/SARS/abstractevaluation/">
 
             {% csrf_token %}
             {% for hidden in form.hidden_fields %}
