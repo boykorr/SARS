@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+{% load staticfiles %}
 <html>
     <head>
         <title>SARS - {% block title %}{% endblock %}</title>
@@ -7,7 +7,7 @@
 
     <body>
 	<header> 
-	
+		<img src="{% static "images/logo.png " %}" alt="Picture of SARS Logo" />
 	{% if user.is_authenticated %}
 	Hello {{ user.username}} 
 	{% endif %}</header>
