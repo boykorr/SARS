@@ -6,6 +6,11 @@
     </head>
 
     <body>
+	<header> 
+	
+	{% if user.is_authenticated %}
+	Hello {{ user.username}} 
+	{% endif %}</header>
         <div>
             {% block body_block %}{% endblock %}
         </div>
@@ -23,5 +28,6 @@
 
             </ul>
         </div>
+		<footer></footer>
     </body>
 </html>
