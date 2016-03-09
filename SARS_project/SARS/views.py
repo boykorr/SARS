@@ -46,7 +46,7 @@ def register(request):
                 profile.picture = request.FILES['picture']
 
             # Now we save the UserProfile model instance.
-            profile.save()
+            #profile.save()
 
             # Update our variable to tell the template registration was successful.
             registered = True
