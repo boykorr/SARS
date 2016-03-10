@@ -17,7 +17,7 @@ TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATE_DIRS = (
     TEMPLATE_PATH,
-                 )
+)
 
 STATIC_PATH = os.path.join(BASE_DIR,'static')
 
@@ -51,6 +51,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'SARS',
+    'registration',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,3 +91,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# Django registration redux
+REGISTRATION_OPEN = True                # If True, users can register
+ACCOUNT_ACTIVATION_DAYS = 7     # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True  # If True, the user will be automatically logged in.
+LOGIN_REDIRECT_URL = '/rango/'  # The page you want users to arrive at after they successful log in
+LOGIN_URL = '/accounts/login/'  # The page users are directed to if they are not logged in,
+                                                                # and are trying to access pages requiring authentication
