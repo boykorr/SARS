@@ -1,7 +1,9 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
-from django.contrib.postgres.fields import ArrayField
+#from django.contrib.postgres.fields import ArrayField
+#from django_pg import models
+
 
 """class Researcher(models.Model):
     user = models.OneToOneField(User)
@@ -29,8 +31,8 @@ class Paper(models.Model):
     abstract = models.CharField(max_length=2000) #widget=forms.Textarea"""
 
 class Query(models.Model):
-    queryBox = models.CharField(max_length=128)
-    query = ArrayField(models.CharField(max_length=20))
+    queryBox = models.CharField(max_length=128, null=True)
+    #query = models.ArrayField(models.CharField(max_length=20))
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

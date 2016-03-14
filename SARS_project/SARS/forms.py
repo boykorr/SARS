@@ -2,11 +2,12 @@ from django import forms
 from django.contrib.auth.models import User
 from SARS.models import Query
 from SARS.models import UserProfile
-from django.contrib.postgres.forms import SimpleArrayField
+from django.forms import ModelForm, Textarea
+#from django.contrib.postgres.forms import SimpleArrayField
 
 class QueryForm(forms.ModelForm):
     queryBox = forms.CharField(max_length=128, help_text="Enter query:")
-    query = ArrayField(forms.CharField(max_length=20))
+    #query = ArrayField(forms.CharField(max_length=20))
     #print query
 
     class Meta:

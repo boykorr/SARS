@@ -6,10 +6,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 
+printQuery = []
 
 def query_construction(request):
     form = QueryForm()
-    printQuery = request.POST.get('queryBox')
+    global printQuery
+    printQuery.append(str(request.POST.get('queryBox')))
     context_dict = {'form':form, 'query':printQuery}
     return render(request, 'SARS/query_construction.html', context_dict)
 
