@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from SARS.models import Query
 from SARS.models import UserProfile
+#from django.contrib.postgres.forms import SimpleArrayField
 
 class QueryForm(forms.ModelForm):
     query = forms.CharField(max_length=128, help_text="Enter query:")
