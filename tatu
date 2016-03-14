@@ -1,0 +1,118 @@
+[1mdiff --cc SARS_project/SARS/forms.pyc[m
+[1mindex ce91c09,3d6b44a..0000000[m
+Binary files differ
+[1mdiff --cc SARS_project/SARS/models.pyc[m
+[1mindex 89fdb9d,508f736..0000000[m
+Binary files differ
+[1mdiff --cc SARS_project/SARS/views.pyc[m
+[1mindex f11d14c,32189e7..0000000[m
+Binary files differ
+[1mdiff --cc SARS_project/SARS_project/settings.pyc[m
+[1mindex 04b697e,f4edbdd..0000000[m
+Binary files differ
+[1mdiff --git a/SARS_project/.idea/workspace.xml b/SARS_project/.idea/workspace.xml[m
+[1mindex b5b222a..675eef9 100644[m
+[1m--- a/SARS_project/.idea/workspace.xml[m
+[1m+++ b/SARS_project/.idea/workspace.xml[m
+[36m@@ -2,11 +2,18 @@[m
+ <project version="4">[m
+   <component name="ChangeListManager">[m
+     <list default="true" id="db64f362-7b48-4a97-abb6-57043acc472e" name="Default" comment="">[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS/forms.py" afterPath="$PROJECT_DIR$/SARS/forms.py" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS/models.py" afterPath="$PROJECT_DIR$/SARS/models.py" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/SARS/query_construction.html" afterPath="$PROJECT_DIR$/templates/SARS/query_construction.html" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS/views.py" afterPath="$PROJECT_DIR$/SARS/views.py" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/.name" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/SARS.iml" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/Thumbs.db" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.gitignore" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/modules.xml" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../requirements.txt" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/scopes/scope_settings.xml" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />[m
+     </list>[m
+     <ignored path="SARS_project.iws" />[m
+     <ignored path=".idea/workspace.xml" />[m
+[36m@@ -39,11 +46,11 @@[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="query_construction.html" pinned="false" current="false" current-in-tab="false">[m
+[32m+[m[32m      <file leaf-file-name="query_construction.html" pinned="false" current="true" current-in-tab="true">[m
+         <entry file="file://$PROJECT_DIR$/templates/SARS/query_construction.html">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="510">[m
+[31m-              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />[m
+[32m+[m[32m            <state vertical-scroll-proportion="0.3794643" vertical-offset="0" max-vertical-offset="896">[m
+[32m+[m[32m              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+[36m@@ -109,10 +116,10 @@[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">[m
+[32m+[m[32m      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">[m
+         <entry file="file://$PROJECT_DIR$/SARS/forms.py">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state vertical-scroll-proportion="0.07580825" vertical-offset="0" max-vertical-offset="897">[m
+[32m+[m[32m            <state vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="544">[m
+               <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />[m
+               <folding>[m
+                 <element signature="e#0#24#0" expanded="true" />[m
+[36m@@ -797,14 +804,6 @@[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/templates/SARS/query_construction.html">[m
+[31m-      <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="510">[m
+[31m-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />[m
+[31m-          <folding />[m
+[31m-        </state>[m
+[31m-      </provider>[m
+[31m-    </entry>[m
+     <entry file="file://$PROJECT_DIR$/SARS/views.py">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="340">[m
+[36m@@ -829,6 +828,16 @@[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/SARS/forms.py">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="544">[m
+[32m+[m[32m          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />[m
+[32m+[m[32m          <folding>[m
+[32m+[m[32m            <element signature="e#0#24#0" expanded="true" />[m
+[32m+[m[32m          </folding>[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+     <entry file="file://$PROJECT_DIR$/SARS/models.py">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state vertical-scroll-proportion="-2.04" vertical-offset="0" max-vertical-offset="986">[m
+[36m@@ -837,13 +846,11 @@[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/SARS/forms.py">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/templates/SARS/query_construction.html">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state vertical-scroll-proportion="0.07580825" vertical-offset="0" max-vertical-offset="897">[m
+[31m-          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />[m
+[31m-          <folding>[m
+[31m-            <element signature="e#0#24#0" expanded="true" />[m
+[31m-          </folding>[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.3794643" vertical-offset="0" max-vertical-offset="896">[m
+[32m+[m[32m          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />[m
+[32m+[m[32m          <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Rango - {% block title %}SARS!{% endblock %}</title>
+    <title>SARS - {% block title %}SARS!{% endblock %}</title>
 
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
@@ -53,8 +53,9 @@
           {% block side_block %}
 
             {% if user.is_authenticated %}
-            Hello, {{ user.username }}
-
+            Hello, <b>{{ user.username }}</b>
+              {% else %}
+                <img src="/static/images/logo.png" alt="logo">
             {% endif %}
 
           {% endblock %}

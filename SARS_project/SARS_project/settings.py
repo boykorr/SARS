@@ -68,7 +68,6 @@ ROOT_URLCONF = 'SARS_project.urls'
 
 WSGI_APPLICATION = 'SARS_project.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
