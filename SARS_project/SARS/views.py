@@ -9,10 +9,12 @@ from django.contrib.auth.decorators import login_required
 
 def query_construction(request):
     form = QueryForm()
-    return render(request, 'SARS/query_construction.html',{'form':form})
+    printQuery = request.POST.get('queryBox')
+    context_dict = {'form':form, 'query':printQuery}
+    return render(request, 'SARS/query_construction.html', context_dict)
 
 def abstract_evaluation(request):
-    printQuery = request.POST.get('query')
+    printQuery = request.POST.get('queryBox')
     return HttpResponse(printQuery)
 
 def successful_registration(request):

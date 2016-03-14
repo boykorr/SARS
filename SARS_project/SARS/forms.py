@@ -2,15 +2,16 @@ from django import forms
 from django.contrib.auth.models import User
 from SARS.models import Query
 from SARS.models import UserProfile
-#from django.contrib.postgres.forms import SimpleArrayField
+from django.contrib.postgres.forms import SimpleArrayField
 
 class QueryForm(forms.ModelForm):
-    query = forms.CharField(max_length=128, help_text="Enter query:")
+    queryBox = forms.CharField(max_length=128, help_text="Enter query:")
+    query = ArrayField(forms.CharField(max_length=20))
     #print query
 
     class Meta:
         model = Query
-        fields = ('query',)
+        fields = ('queryBox',)
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
