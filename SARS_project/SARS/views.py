@@ -11,7 +11,9 @@ printQuery = []
 def query_construction(request):
     form = QueryForm()
     global printQuery
-    printQuery.append(str(request.POST.get('queryBox')))
+    getQueryRequest = request.POST.get('queryBox')
+    if getQueryRequest != "" and getQueryRequest != None and getQueryRequest not in printQuery:
+        printQuery.append(str(getQueryRequest))
     context_dict = {'form':form, 'query':printQuery}
     return render(request, 'SARS/query_construction.html', context_dict)
 
