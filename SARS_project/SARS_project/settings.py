@@ -18,8 +18,8 @@ TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
-
 STATIC_PATH = os.path.join(BASE_DIR,'static')
+#DOCUMENT_PATH = os.path.join(BASE_DIR,'userQueries')
 
 STATIC_URL = '/static/' # You may find this is already defined as such.
 

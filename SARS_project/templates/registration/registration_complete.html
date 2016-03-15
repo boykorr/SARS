@@ -3,5 +3,11 @@
 
 {% block body_block %}
 <h1>Registration Complete</h1>
-        <p>You are now registered</p>
+    <form method="post" action="/SARS/successfulregistration/">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>You are now registered</p>
+            <input type="submit" value="Click to create user file" />
+            {{ user }}
+    </form>
 {% endblock %}
