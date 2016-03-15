@@ -5,6 +5,7 @@ from SARS.forms import UserForm, UserProfileForm, QueryForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
+import os
 
 printQuery = []
 
@@ -22,4 +23,11 @@ def abstract_evaluation(request):
     return HttpResponse(printQuery)
 
 def successful_registration(request):
+
+    path = 'H:\Github\SARS\SARS_project\userQueries'
+    currentUsername = "bil.txt"
+    file = os.path.join(path, currentUsername)
+    queryFile = open(file,"w")
+
     return HttpResponseRedirect('/SARS/')
+
