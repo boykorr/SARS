@@ -32,6 +32,7 @@ class Paper(models.Model):
 
 class Query(models.Model):
     queryBox = models.CharField(max_length=128, null=True)
+    user = models.OneToOneField(User)
     #query = models.ArrayField(models.CharField(max_length=20))
 
     def save(self, *args, **kwargs):
