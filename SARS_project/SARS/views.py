@@ -19,8 +19,9 @@ def query_construction(request):
     return render(request, 'SARS/query_construction.html', context_dict)
 
 def abstract_evaluation(request):
-    printQuery = request.POST.get('queryBox')
-    return HttpResponse(printQuery)
+    #printQuery = request.POST.get('queryBox')
+    return render(request, 'SARS/abstract_evaluation.html',{})
+    #return HttpResponse(printQuery)
 
 def successful_registration(request):
 
