@@ -12,7 +12,7 @@ class QueryForm(forms.ModelForm):
 
     class Meta:
         model = Query
-        fields = ('queryBox', 'user',)
+        fields = ('queryBox',)
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
