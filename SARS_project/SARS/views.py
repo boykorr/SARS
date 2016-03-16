@@ -10,6 +10,10 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from SARS_project.settings import BASE_DIR
 
+import subprocess
+import webbrowser
+import sys
+
 printQuery = []
 username = ''
 
@@ -24,7 +28,10 @@ def query_construction(request):
     return render(request, 'SARS/query_construction.html', context_dict)
 
 def abstract_evaluation(request):
-    #printQuery = request.POST.get('queryBox')
+#open in a new tab
+    baseURL = "http://www.ncbi.nlm.nih.gov/"
+    webbrowser.open_new_tab(baseURL)
+
     return render(request, 'SARS/abstract_evaluation.html',{})
     #return HttpResponse(printQuery)
 
