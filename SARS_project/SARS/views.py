@@ -9,6 +9,7 @@ import os
 from django.contrib.auth.models import User
 from datetime import datetime
 from SARS_project.settings import BASE_DIR
+import webbrowser
 
 global printQuery
 printQuery = []
@@ -40,7 +41,9 @@ def query_construction(request):
 
 def abstract_evaluation(request):
 #open in a new tab
-    baseURL = "http://www.ncbi.nlm.nih.gov/"
+    baseURL = "http://www.ncbi.nlm.nih.gov/pubmed/?term="
+    #for query in query:
+        #baseURL = baseURL + query
     webbrowser.open_new_tab(baseURL)
 
     return render(request, 'SARS/abstract_evaluation.html',{})
