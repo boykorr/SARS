@@ -42,8 +42,11 @@ def query_construction(request):
 def abstract_evaluation(request):
 #open in a new tab
     baseURL = "http://www.ncbi.nlm.nih.gov/pubmed/?term="
-    #for query in query:
-        #baseURL = baseURL + query
+    searchURL = baseURL + printQuery[0]
+    for i in range(1, printQuery.size()):
+        searchURL = searchURL + "+" + "and" + query
+
+
     webbrowser.open_new_tab(baseURL)
 
     return render(request, 'SARS/abstract_evaluation.html',{})
