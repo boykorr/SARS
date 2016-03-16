@@ -10,15 +10,7 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from SARS_project.settings import BASE_DIR
 
-<<<<<<< HEAD
-import subprocess
-import webbrowser
-import sys
-
-=======
-
 global printQuery
->>>>>>> 1bd4f63ed110dcdabc93c4d90ba38a04ff88851c
 printQuery = []
 global username
 username = None
