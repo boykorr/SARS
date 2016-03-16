@@ -15,6 +15,9 @@ global printQuery
 printQuery = []
 global username
 username = None
+global baseURL
+baseURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+#downloadURL = "esummary.fcgi?db=pubmed&id="
 
 path = os.path.join(BASE_DIR,'userQueries')
 
@@ -41,13 +44,12 @@ def query_construction(request):
 
 def abstract_evaluation(request):
 #open in a new tab
-    baseURL = "http://www.ncbi.nlm.nih.gov/pubmed/?term="
-    searchURL = baseURL + printQuery[0]
-    for i in range(1, printQuery.size()):
-        searchURL = searchURL + "+" + "and" + query
 
-
-    webbrowser.open_new_tab(baseURL)
+    searchURL = baseURL + "esearch.fcgi?db=pubmed&term=" + printQuery[0]
+    for i in range(1, len(printQuery)):
+        searchURL = searchURL + "+AND+" + printQuery[i]
+        #&usehistory=y Stores query in pubmed history server
+    webbrowser.open_new_tab(searchURL)
 
     return render(request, 'SARS/abstract_evaluation.html',{})
     #return HttpResponse(printQuery)
