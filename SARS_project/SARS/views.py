@@ -9,7 +9,7 @@ import os
 from django.contrib.auth.models import User
 from datetime import datetime
 from SARS_project.settings import BASE_DIR
-import webbrowser
+
 
 global printQuery
 printQuery = []
@@ -43,6 +43,7 @@ def query_construction(request):
     return render(request, 'SARS/query_construction.html', context_dict)
 
 def abstract_evaluation(request):
+
 #open in a new tab
 
     searchURL = baseURL + "esearch.fcgi?db=pubmed&term=" + printQuery[0]
@@ -52,7 +53,7 @@ def abstract_evaluation(request):
     webbrowser.open_new_tab(searchURL)
 
     return render(request, 'SARS/abstract_evaluation.html',{})
-    #return HttpResponse(printQuery)
+
 
 def successful_registration(request):
     if request.user.is_authenticated():
@@ -63,4 +64,3 @@ def successful_registration(request):
     queryFile.close()
 
     return HttpResponseRedirect('/SARS/')
-
