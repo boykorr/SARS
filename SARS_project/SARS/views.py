@@ -8,8 +8,10 @@ from django.contrib.auth.decorators import login_required
 import os
 from django.contrib.auth.models import User
 from datetime import datetime
+from SARS_project.settings import BASE_DIR
 
 printQuery = []
+username = ''
 
 def query_construction(request):
     form = QueryForm()
@@ -26,22 +28,13 @@ def abstract_evaluation(request):
     return HttpResponse(printQuery)
 
 def successful_registration(request):
-    #if request.session.test_cookie_worked():
-        #print ">>>> TEST COOKIE WORKED!"
-        #request.session.delete_test_cookie()
-        #print request.COOKIES
+    print request.POST
+    path = os.path.join(BASE_DIR,'userQueries')
+    global username
+    username = User.objects.all().values_list('username')[len(User.objects.all().values_list('username'))-1][0]
 
-
-
-    path = 'H:\Github\SARS\SARS_project\userQueries'
-    currentUsername = User.objects.all().values_list('username')[len(User.objects.all().values_list('username'))-1][0] + ".txt"
-    file = os.path.join(path, currentUsername)
+    file = os.path.join(path, username + ".txt")
     queryFile = open(file,"w")
-    #userForm = QueryForm()
-    #print userForm.fields['user']
-    #print userForm.user.get_username()
-    #response.set_cookie('yer_maw', datetime.now())
-    #print request.COOKIES
 
     return HttpResponseRedirect('/SARS/')
 
