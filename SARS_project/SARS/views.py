@@ -40,17 +40,15 @@ def query_construction(request):
     return render(request, 'SARS/query_construction.html', context_dict)
 
 def abstract_evaluation(request):
-    #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
-    for query in printQuery:
-        queryFile.write(query + "\n")
+    printQuery = request.POST.get('queryBox')
     return HttpResponse(printQuery)
 
 def successful_registration(request):
-    username = request.user.get_username()
+    if request.user.is_authenticated():
+        username = request.user.get_username()
 
     file = os.path.join(path, username + ".txt")
     queryFile = open(file,"w")
     queryFile.close()
 
     return HttpResponseRedirect('/SARS/')
-
