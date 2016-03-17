@@ -40,11 +40,21 @@ def query_construction(request):
         username = request.user.get_username()
 
         file = os.path.join(path, username + ".txt")
-        queryFile = open(file, "w")
-        queryFile.close()
+
+        queryFile = open(file,"w")
+        queryFile.write("Queries:\n")
+        queryFile.write(str(printQuery) + "\n")
+        queryFile.close
+
+        #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
+        #    for query in printQuery:
+        #        queryFile.write(query + "\n")
 
     return render(request, 'SARS/query_construction.html', context_dict)
 
+def clear_all(request):
+    del printQuery [:]
+    return HttpResponseRedirect('/SARS')
 
 def abstract_evaluation(request):
     if (printQuery):

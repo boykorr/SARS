@@ -8,7 +8,10 @@
             {% csrf_token %}
             {{ form.as_p }}
             <p>You are now registered</p>
-            <input type="submit" value="Click to construct query" />
-            {{ user }}
+            <!--<input type="submit" value="Click to construct query" />-->
+    <script> $(document).ready(function(){
+
+    window.location.replace('../../../SARS/');})
+</script>
     </form>
 {% endblock %}

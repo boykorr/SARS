@@ -15,21 +15,39 @@
                 {{ field.errors }}
                 {{ field.help_text }}
                 {{ field }}
+
             {% endfor %}
 
             <input type="submit" name="submit" value="Add" />
         </form>
-
         <form method="GET" action = "/SARS/abstractevaluation/">
             <input type="Submit" value="Search">
         </form>
+        <form method="GET" action = "/SARS/clearall">
+        <input type="Submit" value="Clear All">
+        <script>$( 'Clear All' ).click(function() {
+                if (window.location.href.indexOf('reload')==-1) {
+                   window.location.replace(window.location.href+'?reload');
+    }
+});
+        </script>
+        </form>
 
+        <p></p>
         <ol>
-            {% for entry in query %}
-                    <li>{{ entry }}</li>
-            {% endfor %}
-        </ol>
+        {% for entry in query %}
+                <li><button name="subject" type="submit" value=&#10007>&#10007</button>{{ entry }}</li>
+<script>
+                $("li").ready(function(){
+                $("li").click(function() {
+                    $(this).remove();
 
+                <!--alert("The paragraph was clicked.");-->
+    });
+});
+</script>
+        {% endfor %}
+        </ol>
 
 
     {% endblock %}
