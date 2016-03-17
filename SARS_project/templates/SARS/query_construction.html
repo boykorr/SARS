@@ -15,23 +15,21 @@
                 {{ field.errors }}
                 {{ field.help_text }}
                 {{ field }}
-
             {% endfor %}
 
             <input type="submit" name="submit" value="Add" />
         </form>
-        <ol>
 
-
-        {% for entry in query %}
-
-                <li>{{ entry }}</li>
-
-        {% endfor %}
-        </ol>
         <form method="GET" action = "/SARS/abstractevaluation/">
             <input type="Submit" value="Search">
         </form>
+
+        <ol>
+            {% for entry in query %}
+                    <li>{{ entry }}</li>
+            {% endfor %}
+        </ol>
+
 
 
     {% endblock %}
