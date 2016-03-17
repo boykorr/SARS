@@ -23,7 +23,7 @@ global abstractList
 abstractList = []
 
 baseURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
-abstractURL = baseURL+"eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
+abstractURL = baseURL+"efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 # downloadURL = "esummary.fcgi?db=pubmed&id="
 
 path = os.path.join(BASE_DIR, 'userQueries')
@@ -61,7 +61,7 @@ def abstract_evaluation(request):
         for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + printQuery[i]
         # &usehistory=y Stores query in pubmed history server
 
-        webbrowser.open_new_tab(searchURL)
+        #webbrowser.open_new_tab(searchURL)
 
         wResp = urllib2.urlopen(searchURL)
         web_pg = wResp.read()
@@ -79,16 +79,20 @@ def abstract_evaluation(request):
         for i in range(0, len(finalData)-1):finalData[i] = finalData[i][:-1]
 
         for n in finalData:print n
-
+        print "cunto1"
         for i in finalData:
             searchURL = abstractURL + i
+            print "cunto2"
+            print searchURL
             #print searchURL
             #webbrowser.open_new_tab(searchURL)
             wResp = urllib2.urlopen(searchURL)
+            print "cunto3"
             web_pg = wResp.read()
             abstractList.append(str(web_pg[3:]))
 
         context_dict = {'abstracts': abstractList}
+        print "cunto4"
         return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
