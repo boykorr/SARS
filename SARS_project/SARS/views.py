@@ -11,7 +11,7 @@ from datetime import datetime
 from SARS_project.settings import BASE_DIR
 import webbrowser
 
-
+global context_dict
 global printQuery
 printQuery = []
 global username
@@ -36,12 +36,20 @@ def query_construction(request):
         file = os.path.join(path, username + ".txt")
         queryFile = open(file,"w")
         queryFile.write("Queries:\n")
+        queryFile.write(str(printQuery) + "\n")
+        queryFile.close
 
         #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
         #    for query in printQuery:
         #        queryFile.write(query + "\n")
 
     return render(request, 'SARS/query_construction.html', context_dict)
+
+def clear_all(request):
+    del printQuery [:]
+    return HttpResponseRedirect('/SARS')
+
+
 
 def abstract_evaluation(request):
 
