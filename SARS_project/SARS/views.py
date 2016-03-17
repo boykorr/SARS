@@ -9,16 +9,10 @@ import os
 from django.contrib.auth.models import User
 from datetime import datetime
 from SARS_project.settings import BASE_DIR
-import webbrowser
 
-
-global printQuery
 printQuery = []
 global username
 username = None
-global baseURL
-baseURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
-#downloadURL = "esummary.fcgi?db=pubmed&id="
 
 path = os.path.join(BASE_DIR,'userQueries')
 
@@ -26,9 +20,11 @@ def query_construction(request):
     form = QueryForm()
     getQueryRequest = request.POST.get('queryBox')
 
+    global printQuery
     if getQueryRequest != "" and getQueryRequest != None and getQueryRequest not in printQuery:
         printQuery.append(str(getQueryRequest))
     context_dict = {'form':form, 'query':printQuery}
+<<<<<<< HEAD
 
     if request.user.is_authenticated():
         username = request.user.get_username()
@@ -36,6 +32,8 @@ def query_construction(request):
         file = os.path.join(path, username + ".txt")
         queryFile = open(file,"w")
         queryFile.write("Queries:\n")
+=======
+>>>>>>> 503a5ef00066c1639c34aec5370e276ca208eb61
 
         #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
         #    for query in printQuery:
@@ -44,26 +42,19 @@ def query_construction(request):
     return render(request, 'SARS/query_construction.html', context_dict)
 
 def abstract_evaluation(request):
+    #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
+    global printQuery
+    username = request.user.get_username()
+    file = os.path.join(path, username + ".txt")
+    queryFile = open(file,"a")
+    queryFile.write("Queries:\n")
+    for query in printQuery:
+        queryFile.write(query + "\n")
 
-#open in a new tab
-
-    searchURL = baseURL + "esearch.fcgi?db=pubmed&term=" + printQuery[0]
-    for i in range(1, len(printQuery)):
-        searchURL = searchURL + "+AND+" + printQuery[i]
-        #&usehistory=y Stores query in pubmed history server
-    webbrowser.open_new_tab(searchURL)
-
-    return render(request, 'SARS/abstract_evaluation.html',{})
-
-def document_evaluation(request):
-
-
-    return render(request, 'SARS/document_evaluation.html',{})
-
+    return render(request, 'SARS/abstract_evaluation.html', {})
 
 def successful_registration(request):
-    if request.user.is_authenticated():
-        username = request.user.get_username()
+    username = request.user.get_username()
 
     file = os.path.join(path, username + ".txt")
     queryFile = open(file,"w")
