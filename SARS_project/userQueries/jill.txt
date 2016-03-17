@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-=======
-Queries:
-Queries:
->>>>>>> 20da3db2a5cf80b479c7e0d9f0def1a8398a9d5b

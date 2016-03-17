@@ -5,37 +5,19 @@
 
 {% block body_block %}
     <h1> Please tick all the relevant abstracts </h1>
-<<<<<<< HEAD
     <form>
-       <input type="checkbox" name="vehicle1" value="value">
+       <!--<input type="checkbox" name="vehicle1" value="value">-->
        <div>
-         <h3> <input type="checkbox" name="checkbox" value= "value" >Abstract 1 </h3>
-         <p>blah blah blah</p>
-         <p>blah.</p>
+       <ol>
+           {%  for abstract in abstracts  %}
+                    <li>
+                        <p>
+                            <input type="checkbox" name="checkbox" value= "value" >{{ abstract }}
+                        </p>
+                    </li>
+           {% endfor %}
+       </ol>
        </div>
-=======
-    <form action="">
-
-
-
-
-
-   <div class="abstract">
-     <h3> Abstract 1  <input type="checkbox" name="vehicle1" value="value"> </h3>
-     <p>blah blah blah</p>
-     <p>blah.</p>
-   </div>
-
-
-   <div class="abstract">
-     <h3> Abstract 2 <input type="checkbox" name="checkbox" value= "value" ></h3>
-     <p>meh meh meh</p>
-     <p>meh</p>
-   </div>
-
-
-
->>>>>>> 20da3db2a5cf80b479c7e0d9f0def1a8398a9d5b
     </form>
 
     <form method="link" action = "/SARS/documentevaluation/">
