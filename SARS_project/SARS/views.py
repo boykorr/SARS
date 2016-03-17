@@ -10,8 +10,6 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from SARS_project.settings import BASE_DIR
 
-
-global printQuery
 printQuery = []
 global username
 username = None
@@ -22,16 +20,10 @@ def query_construction(request):
     form = QueryForm()
     getQueryRequest = request.POST.get('queryBox')
 
+    global printQuery
     if getQueryRequest != "" and getQueryRequest != None and getQueryRequest not in printQuery:
         printQuery.append(str(getQueryRequest))
     context_dict = {'form':form, 'query':printQuery}
-
-    if request.user.is_authenticated():
-        username = request.user.get_username()
-
-        file = os.path.join(path, username + ".txt")
-        queryFile = open(file,"w")
-        queryFile.write("Queries:\n")
 
         #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
         #    for query in printQuery:
@@ -40,12 +32,19 @@ def query_construction(request):
     return render(request, 'SARS/query_construction.html', context_dict)
 
 def abstract_evaluation(request):
-    printQuery = request.POST.get('queryBox')
-    return HttpResponse(printQuery)
+    #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
+    global printQuery
+    username = request.user.get_username()
+    file = os.path.join(path, username + ".txt")
+    queryFile = open(file,"a")
+    queryFile.write("Queries:\n")
+    for query in printQuery:
+        queryFile.write(query + "\n")
+
+    return render(request, 'SARS/abstract_evaluation.html', {})
 
 def successful_registration(request):
-    if request.user.is_authenticated():
-        username = request.user.get_username()
+    username = request.user.get_username()
 
     file = os.path.join(path, username + ".txt")
     queryFile = open(file,"w")
