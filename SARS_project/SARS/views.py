@@ -21,6 +21,7 @@ global username
 username = None
 global abstractList
 abstractList = []
+
 baseURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 abstractURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 # downloadURL = "esummary.fcgi?db=pubmed&id="
@@ -72,6 +73,8 @@ def abstract_evaluation(request):
         docNumber = splitData[11][1:-2]
         print docNumber
 
+        global finalData
+
         finalData = splitData[18:(splitData.index("],"))]
 
         for i in range(0, len(finalData)):finalData[i] = finalData[i][1:-1]
@@ -88,14 +91,13 @@ def abstract_evaluation(request):
             abstractList.append(str(web_pg[3:]))
 
         context_dict = {'abstracts': abstractList}
-
         return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
-
-
 def document_evaluation(request):
-    return render(request, 'SARS/document_evaluation.html', {})
+    print finalData
+    context_dict = {'documentID': finalData}
+    return render(request, 'SARS/document_evaluation.html', context_dict)
 
 
 def successful_registration(request):

@@ -3,7 +3,17 @@
 {% block title %} Stage 3 {% endblock %}
 
 {% block body_block %}
-   <a href="https://www.youtube.com/" target="_blank"> Link to Document 1</a><br>
-   <a href="https://www.youtube.com/" target="_blank"> Link to Document 2</a>
+   <div>
+   <ol>
+        {%  for ID in documentID  %}
+            <li>
+                <p>
+                    <input type="checkbox" name="checkbox" value= "value" ><a href="http://www.ncbi.nlm.nih.gov/pubmed/{{ ID }}" target="_blank">  {{ ID }}</a><br>
+                </p>
+            </li>
+        {% endfor %}
+   </ol>
+   </div>
+
 
 {% endblock %}
