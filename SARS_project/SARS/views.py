@@ -23,7 +23,7 @@ global abstractList
 abstractList = []
 
 baseURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
-abstractURL = baseURL+"eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
+abstractURL = baseURL+"efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 # downloadURL = "esummary.fcgi?db=pubmed&id="
 
 path = os.path.join(BASE_DIR, 'userQueries')
