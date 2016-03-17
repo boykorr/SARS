@@ -28,7 +28,7 @@ def query_construction(request):
 
     if getQueryRequest != "" and getQueryRequest != None and getQueryRequest not in printQuery:
         printQuery.append(str(getQueryRequest))
-    context_dict = {'form':form, 'query':printQuery, 'size': len(printQuery)}
+    context_dict = {'form':form, 'query':printQuery}
 
     if request.user.is_authenticated():
         username = request.user.get_username()
