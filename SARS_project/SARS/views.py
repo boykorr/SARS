@@ -23,7 +23,7 @@ global abstractList
 abstractList = []
 
 baseURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
-abstractURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
+abstractURL = baseURL+"eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 # downloadURL = "esummary.fcgi?db=pubmed&id="
 
 path = os.path.join(BASE_DIR, 'userQueries')
@@ -47,15 +47,13 @@ def query_construction(request):
         queryFile.write(str(printQuery) + "\n")
         queryFile.close
 
-        #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
-        #    for query in printQuery:
-        #        queryFile.write(query + "\n")
-
     return render(request, 'SARS/query_construction.html', context_dict)
+
 
 def clear_all(request):
     del printQuery [:]
     return HttpResponseRedirect('/SARS')
+
 
 def abstract_evaluation(request):
     if (printQuery):
