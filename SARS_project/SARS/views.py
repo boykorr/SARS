@@ -9,6 +9,7 @@ import os
 from django.contrib.auth.models import User
 from datetime import datetime
 from SARS_project.settings import BASE_DIR
+import webbrowser
 
 
 global printQuery
@@ -27,7 +28,7 @@ def query_construction(request):
 
     if getQueryRequest != "" and getQueryRequest != None and getQueryRequest not in printQuery:
         printQuery.append(str(getQueryRequest))
-    context_dict = {'form':form, 'query':printQuery}
+    context_dict = {'form':form, 'query':printQuery, 'size': len(printQuery)}
 
     if request.user.is_authenticated():
         username = request.user.get_username()
@@ -53,6 +54,11 @@ def abstract_evaluation(request):
     webbrowser.open_new_tab(searchURL)
 
     return render(request, 'SARS/abstract_evaluation.html',{})
+
+def document_evaluation(request):
+
+
+    return render(request, 'SARS/document_evaluation.html',{})
 
 
 def successful_registration(request):
