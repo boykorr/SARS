@@ -24,7 +24,6 @@ def query_construction(request):
     if getQueryRequest != "" and getQueryRequest != None and getQueryRequest not in printQuery:
         printQuery.append(str(getQueryRequest))
     context_dict = {'form':form, 'query':printQuery}
-<<<<<<< HEAD
 
     if request.user.is_authenticated():
         username = request.user.get_username()
@@ -32,8 +31,7 @@ def query_construction(request):
         file = os.path.join(path, username + ".txt")
         queryFile = open(file,"w")
         queryFile.write("Queries:\n")
-=======
->>>>>>> 503a5ef00066c1639c34aec5370e276ca208eb61
+
 
         #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
         #    for query in printQuery:
@@ -52,6 +50,11 @@ def abstract_evaluation(request):
         queryFile.write(query + "\n")
 
     return render(request, 'SARS/abstract_evaluation.html', {})
+
+def document_evaluation(request):
+
+        return render(request, 'SARS/document_evaluation.html', {})
+
 
 def successful_registration(request):
     username = request.user.get_username()
