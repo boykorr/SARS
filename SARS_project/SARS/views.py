@@ -59,12 +59,6 @@ def query_construction(request):
     return render(request, 'SARS/query_construction.html', context_dict)
 
 
-# clears the queries so far
-def clear_all(request):
-    del printQuery[:]
-    return HttpResponseRedirect('/SARS')
-
-
 def abstract_evaluation(request):
     if printQuery:
         if len(abstractList) is 0:

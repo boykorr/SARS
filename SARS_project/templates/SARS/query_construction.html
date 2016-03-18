@@ -2,6 +2,10 @@
 
 {% block title %} Stage 1 {% endblock %}
 
+    {% block head_block %}
+        <script type="text/javascript" src="{{ STATIC_URL }}JQuery/query_abstraction_script.js"></script>
+    {% endblock %}
+
     {% block body_block %}
         <h1>Construct a query</h1>
 
@@ -17,8 +21,9 @@
                 {{ field.help_text }}
                 {{ field }}
             {% endfor %}
-            <!--adding the add button-->
-            <input type="submit" name="submit" value="Add" />
+
+            <button name="add" type="button" value="OK">Add</button>
+
         </form>
 
         <div style="height:1em"></div>
@@ -29,18 +34,16 @@
                 <input type="Submit" value="Search">
             </form>
         </div>
+
         <div style="display: inline-block">
             <form method="GET" action = "/SARS/clearall">
-                <input type="Submit" value="Clear All">
-                    <!--when the button is clicked the printQuery is clear in the views and then the page is
-                    refreshed once so that the changes will be applied-->
-                    <script>
-                        $( 'Clear All' ).click(function() {
-                            if (window.location.href.indexOf('reload')==-1) {
-                                window.location.replace(window.location.href+'?reload');
-                            }
-                        });
-                    </script>
+                <button name="clear" type="button" value ="clear">Clear All</button>
+            </form>
+        </div>
+
+        <div style="display: inline-block">
+            <form>
+                <button name="edit" type="button" value ="edit">Edit</button>
             </form>
         </div>
 
@@ -48,17 +51,7 @@
         <div style="position: relative;text-align: center;height:0.2em;background-color:black"></div>
         <div style="height:1em"></div>
 
-        <ol>
-        <!--printing all the queries that are made-->
-        {% for entry in query %}
-            <li><button name="subject" type="submit" value=&#10007>&#10007</button>{{ entry }}</li>
-            <script>
-                $("li").ready(function(){
-                    $("li").click(function() {
-                        $(this).remove();
-                    });
-                });
-            </script>
-        {% endfor %}
+        <ol id="list">
+
         </ol>
     {% endblock %}
