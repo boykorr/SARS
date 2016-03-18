@@ -14,26 +14,25 @@
       }
             </script>
     </div>
-
+    
     <div style="display:inline-block">
         <form method="link" action = "/SARS/documentevaluation/">
             <input type="Submit" value="Next">
         </form>
     </div>
+    
     <p></p>
+    
     <form>
-       <div>
        <ol>
-            <!--print all the abstracts that are relevant to the queries with a checkbox next to each-->
-           {%  for abstract in abstracts  %}
-                    <li style="border: 1px solid #000000">
+            {%  for abstract in abstracts  %}
+                <li style="border: 2px solid black">
                         <p>
-                            <input type="checkbox" name="checkbox" value= "value" >{{ abstract }}
+                            <input type="checkbox" name="checkbox" value="value"/>{{ abstract }}
                         </p>
-                    </li><br>
-           {% endfor %}
+                </li><br>
+            {% endfor %}
        </ol>
-       </div>
     </form>
 
     {% endblock %}
