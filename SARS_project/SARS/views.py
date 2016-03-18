@@ -67,7 +67,7 @@ def abstract_evaluation(request):
             for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + printQuery[i]
             # &usehistory=y Stores query in pubmed history server
 
-            webbrowser.open_new_tab(searchURL)
+            #webbrowser.open_new_tab(searchURL)
 
             wResp = urllib2.urlopen(searchURL)
             web_pg = wResp.read()

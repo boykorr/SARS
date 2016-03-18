@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="653a4ad4-1fb4-4fff-b0ad-ce99986301f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/db.sqlite3" afterPath="$PROJECT_DIR$/SARS_project/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/SARS/views.py" afterPath="$PROJECT_DIR$/SARS_project/SARS/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/registration/login.html" afterPath="$PROJECT_DIR$/SARS_project/templates/registration/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/userQueries/jill.txt" afterPath="$PROJECT_DIR$/SARS_project/userQueries/jill.txt" />
     </list>
     <ignored path="SARS.iws" />
@@ -35,7 +32,7 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
               <folding />
             </state>
@@ -45,7 +42,7 @@
       <file leaf-file-name="FirstCSS.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SARS_project/static/css/FirstCSS.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="30.434782">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -55,7 +52,7 @@
       <file leaf-file-name="SecondCSS.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SARS_project/static/css/SecondCSS.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.382353">
+            <state vertical-scroll-proportion="0.0">
               <caret line="46" column="29" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="29" />
               <folding />
             </state>
@@ -65,8 +62,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SARS_project/SARS/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="22.571428">
-              <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+            <state vertical-scroll-proportion="-7.142857">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -77,15 +74,15 @@
       <file leaf-file-name="query_construction.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.117647">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.617647">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="48" selection-end-column="38" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,7 +91,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SARS_project/SARS/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.857143">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -106,9 +103,14 @@
       <file leaf-file-name="abstract_evaluation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.235294">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="-18.382353">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#ol#0;n#form#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -118,9 +120,12 @@
       <file leaf-file-name="document_evaluation.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23228803">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.92915213">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ol#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -142,12 +147,12 @@
       <list>
         <option value="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" />
         <option value="$PROJECT_DIR$/SARS_project/SARS/models.py" />
-        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html" />
         <option value="$PROJECT_DIR$/SARS_project/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/SARS_project/SARS/urls.py" />
-        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html" />
-        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html" />
         <option value="$PROJECT_DIR$/SARS_project/SARS/views.py" />
+        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html" />
+        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html" />
+        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html" />
       </list>
     </option>
   </component>
@@ -190,7 +195,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -345,6 +349,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -423,6 +428,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -564,20 +574,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -599,6 +609,93 @@
     <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/static/css/FirstCSS.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/static/css/SecondCSS.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ol#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ol#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
@@ -619,12 +716,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -672,12 +769,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -725,12 +822,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,12 +865,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,7 +939,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/SARS/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.857143">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
@@ -852,7 +949,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding />
         </state>
@@ -860,7 +957,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/static/css/FirstCSS.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="30.434782">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -868,52 +965,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/static/css/SecondCSS.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.382353">
+        <state vertical-scroll-proportion="0.0">
           <caret line="46" column="29" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.235294">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ol#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.117647">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/SARS/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="22.571428">
-          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+        <state vertical-scroll-proportion="-7.142857">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.617647">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="48" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.382353">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ol#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23228803">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.92915213">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ol#0;n#!!top" expanded="true" />
           </folding>
         </state>
