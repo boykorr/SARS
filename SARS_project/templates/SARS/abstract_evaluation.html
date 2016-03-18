@@ -6,17 +6,15 @@
 {% block body_block %}
     <h1> Please tick all the relevant abstracts </h1>
     <form>
-       <div>
        <ol>
-           {%  for abstract in abstracts  %}
-                    <li style="border: 1px solid #000000">
+            {%  for abstract in abstracts  %}
+                <li style="border: 2px solid black">
                         <p>
-                            <input type="checkbox" name="checkbox" value= "value" >{{ abstract }}
+                            <input type="checkbox" name="checkbox" value="value"/>{{ abstract }}
                         </p>
-                    </li><br>
-           {% endfor %}
+                </li><br>
+            {% endfor %}
        </ol>
-       </div>
     </form>
 
     <form method="link" action = "/SARS/documentevaluation/">

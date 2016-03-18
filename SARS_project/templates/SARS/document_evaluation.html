@@ -3,17 +3,17 @@
 {% block title %} Stage 3 {% endblock %}
 
 {% block body_block %}
-   <div>
-   <ol>
+    <h1>Select all relevant documents</h1>
+    <ol style="font-size: 20px">
         {%  for ID in documentID  %}
-            <li>
+            <li style="background-color: #f5f5f5;">
                 <p>
-                    <input type="checkbox" name="checkbox" value= "value" ><a href="http://www.ncbi.nlm.nih.gov/pubmed/{{ ID }}" target="_blank">  {{ ID }}</a><br>
+                    <input type="checkbox" name="checkbox" value= "value"/>
+                    <a href="http://www.ncbi.nlm.nih.gov/pubmed/{{ ID }}" target="_blank">
+                        {{ ID }}
+                    </a><br>
                 </p>
             </li>
         {% endfor %}
-   </ol>
-   </div>
-
-
+    </ol>
 {% endblock %}

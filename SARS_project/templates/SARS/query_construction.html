@@ -1,11 +1,12 @@
 {% extends 'SARS/base.html' %}
 
 {% block title %} Stage 1 {% endblock %}
-    {% block body_block %}
-        <h1>Construct a query</h1>
 
+{% block body_block %}
+    <h1>Construct a query</h1>
+
+    <div>
         <form id="query_form" method="post" action="/SARS/">
-
             {% csrf_token %}
             {% for hidden in form.hidden_fields %}
                 {{ hidden }}
@@ -15,39 +16,45 @@
                 {{ field.errors }}
                 {{ field.help_text }}
                 {{ field }}
-
             {% endfor %}
 
-            <input type="submit" name="submit" value="Add" />
+            <input type="submit" name="submit" value="Add"/>
         </form>
-        <form method="GET" action = "/SARS/abstractevaluation/">
-            <input type="Submit" value="Search">
-        </form>
-        <form method="GET" action = "/SARS/clearall">
-        <input type="Submit" value="Clear All">
-        <script>$( 'Clear All' ).click(function() {
-                if (window.location.href.indexOf('reload')==-1) {
-                   window.location.replace(window.location.href+'?reload');
-    }
-});
-        </script>
-        </form>
+    </div>
 
-        <p></p>
-        <ol>
+    <div style="height:1em"></div>
+
+    <div style="display: inline-block">
+            <form method="GET" action = "/SARS/abstractevaluation/">
+                <input type="Submit" value="Search">
+            </form>
+    </div>
+
+    <div style="display: inline-block">
+            <form method="GET" action="/SARS/clearall">
+                <input type="Submit" value="Clear All">
+                <script>$( 'Clear All' ).click(function() {
+                    if (window.location.href.indexOf('reload')==-1) {
+                       window.location.replace(window.location.href+'?reload');
+                    }
+                });
+                </script>
+            </form>
+    </div>
+
+    <div style="height:1em"></div>
+    <div style="position: relative;text-align: center;height:0.2em;background-color:black"></div>
+    <div style="height:1em"></div>
+
+    <ol>
         {% for entry in query %}
-                <li><button name="subject" type="submit" value=&#10007>&#10007</button>{{ entry }}</li>
-<script>
-                $("li").ready(function(){
-                $("li").click(function() {
-                    $(this).remove();
+            <li>
+                <button name="subject" type="submit" onclick="/SARS/clearn" value="del_n">&#10007</button>
+                <script>
 
-                <!--alert("The paragraph was clicked.");-->
-    });
-});
-</script>
+                </script>
+                {{ entry }}
+            </li>
         {% endfor %}
-        </ol>
-
-
-    {% endblock %}
+    </ol>
+{% endblock %}
