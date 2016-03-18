@@ -9,7 +9,6 @@ urlpatterns = patterns('',
     #url(r'^logout/$', views.user_logout, name='logout'),
     url(r'^abstractevaluation/$', views.abstract_evaluation, name='abstract_evaluation'),
     url(r'^documentevaluation/$', views.document_evaluation, name='document_evaluation'),
-    url(r'^clearall/$', views.clear_all, name='clear_all'),
     #url(R'^accounts/register/$', views.successful_registration, name='registration_register'),
     url(r'^successfulregistration/$', views.successful_registration, name='registration_register'),
     )
