@@ -5,11 +5,11 @@ from SARS.forms import UserForm, UserProfileForm, QueryForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
-import os
 from django.contrib.auth.models import User
 from datetime import datetime
 from SARS_project.settings import BASE_DIR
 
+import os
 import urllib
 import urllib2
 import re
@@ -88,7 +88,7 @@ def abstract_evaluation(request):
 
             n = len(listID)
             for i in range(0, n):
-                if (i < n-1):
+                if i < n-1:
                     listID[i] = listID[i][1:-2]
                 else:
                     listID[i] = listID[i][1:-1]
@@ -102,7 +102,7 @@ def abstract_evaluation(request):
                 web_pg = wResp.read()[3:]
                 abstractList.append(str(web_pg))
 
-    context_dict = {'docID': relevanceList.keys(),'abstracts': abstractList}
+    context_dict = {'docID': relevanceList.keys(), 'abstracts': abstractList}
     return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 

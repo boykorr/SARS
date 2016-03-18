@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
-
+    <link href="{{ STATIC_URL }}images/logo.png" rel="icon">
 
 
     <link href="{{ STATIC_URL }}css/FirstCSS.css" rel="stylesheet">
@@ -39,7 +38,7 @@
         </div>
         <div class="navbar-collapse collapse">
 
-        <img src="/static/images/rsz_1rsz_1rsz_logo1.png" alt="logo">
+            <img src="/static/images/rsz_1rsz_1rsz_logo1.png" alt="logo">
 
           <ul class="nav navbar-nav navbar-right">
                 <li><a href="{% url 'query_construction' %}">Home</a></li>
@@ -49,8 +48,7 @@
                         <li><a href="{% url 'registration_register' %}">Register Here</a></li>
                         <li><a href="{% url 'auth_login' %}">Login</a></li>
                     {% endif %}
-
-              </ul>
+          </ul>
         </div>
       </div>
     </div>
