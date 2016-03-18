@@ -24,45 +24,50 @@ abstractList = []
 global relevanceList
 relevanceList = {}
 
-#the API we are using
+path = os.path.join(BASE_DIR, 'userQueries')
+
+# the API we are using
 # base URL used to open queries, only the abstract's ID should be appended
 baseURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 abstractURL = baseURL+"efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 # downloadURL = "esummary.fcgi?db=pubmed&id="
 
-path = os.path.join(BASE_DIR, 'userQueries')
 
-#getting the queries into a dictionary as long as sth has been typed
+# getting the queries into a dictionary as long as sth has been typed
 def query_construction(request):
     form = QueryForm()
     getQueryRequest = request.POST.get('queryBox')
 
-    if getQueryRequest != "" and getQueryRequest != None and getQueryRequest not in printQuery:
+    if (getQueryRequest is not "") and (getQueryRequest is not None) and (getQueryRequest not in printQuery):
         printQuery.append(str(getQueryRequest))
     context_dict = {'form': form, 'query': printQuery}
-    #creates a document after an user where the queries that user has typed
+
+    # creates a document after an user where the queries that user has typed
     if request.user.is_authenticated():
         username = request.user.get_username()
 
-        file = os.path.join(path, username + ".txt")
-
-        queryFile = open(file,"w")
+        #file = os.path.join(path, username + ".txt")
+        #queryFile = open(file,"w")
         #queryFile.write("Queries:\n")
-        queryFile.write(str(printQuery) + "\n")
-        queryFile.close
+        #queryFile.write(str(printQuery) + "\n")
+        #queryFile.close
+
+    else:
+        del printQuery[:]
 
     del abstractList[:]
     return render(request, 'SARS/query_construction.html', context_dict)
 
-#clears the queries so far
+
+# clears the queries so far
 def clear_all(request):
-    del printQuery [:]
+    del printQuery[:]
     return HttpResponseRedirect('/SARS')
 
 
 def abstract_evaluation(request):
-    if (printQuery):
-        if (len(abstractList)==0):
+    if printQuery:
+        if len(abstractList) is 0:
             searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=5&term=" + printQuery[0]
             for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + printQuery[i]
             # &usehistory=y Stores query in pubmed history server
