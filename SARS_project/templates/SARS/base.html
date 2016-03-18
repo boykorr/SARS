@@ -21,10 +21,7 @@
     <title>SARS - {% block title %}SARS!{% endblock %}</title>
     <script src="scripts/jquery-1.6.2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    {% load staticfiles %}
 
-    <script src="{% static "js/jquery-1.11.1.js" %}"></script>
-    <script src="{% static "js/rango-jquery.js" %}"></script>
   </head>
 
   <body>
@@ -41,6 +38,9 @@
           <a class="navbar-brand" href="/SARS/">SARS</a>
         </div>
         <div class="navbar-collapse collapse">
+
+        <img src="/static/images/rsz_1rsz_1rsz_logo1.png" alt="logo">
+
           <ul class="nav navbar-nav navbar-right">
                 <li><a href="{% url 'query_construction' %}">Home</a></li>
                     {% if user.is_authenticated %}
@@ -62,8 +62,6 @@
 
             {% if user.is_authenticated %}
             Hello, <b>{{ user.username }}</b>
-              {% else %}
-                <img src="/static/images/logo.png" alt="logo">
             {% endif %}
 
           {% endblock %}

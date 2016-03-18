@@ -19,13 +19,18 @@ global printQuery
 printQuery = []
 global username
 username = None
+global abstractList
+abstractList = []
 
+#the API we are using
 baseURL = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+# base URL used to open queries, only the abstract's ID should be appended
+abstractURL = baseURL+"efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 # downloadURL = "esummary.fcgi?db=pubmed&id="
 
 path = os.path.join(BASE_DIR, 'userQueries')
 
-
+#getting the queries into a dictionary as long as sth has been typed
 def query_construction(request):
     form = QueryForm()
     getQueryRequest = request.POST.get('queryBox')
@@ -33,7 +38,7 @@ def query_construction(request):
     if getQueryRequest != "" and getQueryRequest != None and getQueryRequest not in printQuery:
         printQuery.append(str(getQueryRequest))
     context_dict = {'form': form, 'query': printQuery}
-
+    #creates a document after an user where the queries that user has typed
     if request.user.is_authenticated():
         username = request.user.get_username()
 
@@ -44,15 +49,13 @@ def query_construction(request):
         queryFile.write(str(printQuery) + "\n")
         queryFile.close
 
-        #if len(printQuery) > 0 and printQuery[-1] != "" and printQuery[-1] != None:
-        #    for query in printQuery:
-        #        queryFile.write(query + "\n")
-
     return render(request, 'SARS/query_construction.html', context_dict)
 
+#clears the queries so far
 def clear_all(request):
     del printQuery [:]
     return HttpResponseRedirect('/SARS')
+
 
 def abstract_evaluation(request):
     if (printQuery):
@@ -60,15 +63,14 @@ def abstract_evaluation(request):
         for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + printQuery[i]
         # &usehistory=y Stores query in pubmed history server
 
-        webbrowser.open_new_tab(searchURL)
-
         wResp = urllib2.urlopen(searchURL)
         web_pg = wResp.read()
-        #print web_pg
 
         splitData = web_pg.split()
         docNumber = splitData[11][1:-2]
         print docNumber
+
+        global finalData
 
         finalData = splitData[18:(splitData.index("],"))]
 
@@ -77,11 +79,26 @@ def abstract_evaluation(request):
 
         for n in finalData:print n
 
-        return render(request, 'SARS/abstract_evaluation.html', {})
+        for i in finalData:
+            searchURL = abstractURL + i
+
+            print searchURL
+            #print searchURL
+            #webbrowser.open_new_tab(searchURL)
+            wResp = urllib2.urlopen(searchURL)
+
+            web_pg = wResp.read()
+            abstractList.append(str(web_pg[3:]))
+
+        context_dict = {'abstracts': abstractList}
+
+        return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
 def document_evaluation(request):
-    return render(request, 'SARS/document_evaluation.html', {})
+    print finalData
+    context_dict = {'documentID': finalData}
+    return render(request, 'SARS/document_evaluation.html', context_dict)
 
 
 def successful_registration(request):

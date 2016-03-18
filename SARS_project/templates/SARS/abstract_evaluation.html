@@ -5,25 +5,35 @@
 
 {% block body_block %}
     <h1> Please tick all the relevant abstracts </h1>
+    <!--go back and next buttons-->
+    <div>
+        <button onclick="goBack()">Go Back</button>
+            <script>
+                 function goBack() {
+                 window.history.back();
+      }
+            </script>
+    </div>
 
+    <div style="display:inline-block">
+        <form method="link" action = "/SARS/documentevaluation/">
+            <input type="Submit" value="Next">
+        </form>
+    </div>
+    <p></p>
+    <form>
        <div>
-         <h3> <input type="checkbox" name="checkbox" value= "value" >Abstract 1 </h3>
-         <p>blah blah blah</p>
-         <p>blah.</p>
+       <ol>
+            <!--print all the abstracts that are relevant to the queries with a checkbox next to each-->
+           {%  for abstract in abstracts  %}
+                    <li style="border: 1px solid #000000">
+                        <p>
+                            <input type="checkbox" name="checkbox" value= "value" >{{ abstract }}
+                        </p>
+                    </li><br>
+           {% endfor %}
+       </ol>
        </div>
-
-    <form action="">
-
-   <div class="abstract">
-     <h3> <input type="checkbox" name="vehicle1" value="value"> Abstract 1  </h3>
-     <p>blah blah blah</p>
-     <p>blah.</p>
-   </div>
-
     </form>
 
-    <form method="link" action = "/SARS/documentevaluation/">
-        <input type="Submit" value="Next">
-    </form>
-
-{% endblock %}
+    {% endblock %}
