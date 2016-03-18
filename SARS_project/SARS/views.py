@@ -1,12 +1,13 @@
 from django.db.models import query
 from django.shortcuts import render
-from SARS.models import Query, UserProfile
-from SARS.forms import UserForm, UserProfileForm, QueryForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from datetime import datetime
+
+from SARS.models import Query, UserProfile
+from SARS.forms import UserForm, UserProfileForm, QueryForm
 from SARS_project.settings import BASE_DIR
 
 import os
