@@ -1,28 +1,44 @@
 $(document).ready(function(){
+    //Queries array
+    var queries = [];
+    var count = 0;
+
     //When Add button is clicked, add contents of query box to list
     $('button[name=add]').click(function(){
         var toAdd = $('#id_queryBox').val();
-        var Xbutton = '<button name="delete" type="button" value=&#10006>&#10006</button>';
-        //var EButton = '<button name="edit" type="button" value="edit">Edit</button>';
-        $('#list').append('<div><li>' + Xbutton + '<span>' + toAdd + '</span>' + '</li></div>');
+        var Xbutton = '<button id="del" name="delete" type="button" value="">&#10006</button>';
+        var Ebutton = '<button id="edit" name="edit" type="button" value="">Edit</button>';
+        $('#del').val(count);
+        $('#edit').val(count);
+        queries.push(toAdd);
+        //$('ol').append(queries[0]);
+        //$('ol').append(queries[1]);
+        //$('ol').append(queries[2]);
+        count += 1;
+        $('#list').append('<div><li>' + Xbutton + Ebutton + '<span>' + toAdd + '</span>' + '</li></div>');
+        //$('ol').append($('#del').attr("value"));
+        //$('#list').append($("#edit").attr("value"));
     });
 
-    //When 'X' button (or text next to it) is clicked, query is removed
-    $(document).on('click', 'li', function(){
-        $(this).remove;
+    //When 'X' button is clicked, query is removed
+    $(document).on('click', '#del', function(){
+        //delete queries[$(this).attr("value")];
+        $(this).parent().remove();
+        queries.slice($(this).attr("value"));
+        $('#list').append(queries);
+        //delete queries[$(this).attr("value")];
     });
 
-    $('button[name=edit]').click(function(){
+    //When Edit button is clicked, query is changed to contents of query box
+    $(document).on('click', '#edit', function(){
         var newString = $('input[name=queryBox]').val();
-        $('.highlighted').html(newString);
+        $(this).next().html(newString);
+        queries[$(this).attr("value")] = newString;
     });
-
-    //$(document).on('click', $('span').parent(), function(){
-    //   $(this).remove();
-    //});
 
     //When Clear All button is clicked, all queries are removed
     $('button[name=clear]').click(function(){
        $('ol').empty();
+       queries = [];
     });
 });
