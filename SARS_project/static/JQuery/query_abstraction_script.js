@@ -29,6 +29,7 @@ $(document).ready(function(){
         //delete queries[$(this).attr("value")];
     });
 
+   
     //When Edit button is clicked, query is changed to contents of query box
     $(document).on('click', '#edit', function(){
         var newString = $('input[name=queryBox]').val();
