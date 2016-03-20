@@ -36,6 +36,9 @@ abstractURL = baseURL+"efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 
 # getting the queries into a dictionary as long as sth has been typed
 def query_construction(request):
+    printQuery[:]
+    abstractList[:]
+
     form = QueryForm()
     getQueryRequest = request.POST.get('queryBox')
 
@@ -53,8 +56,8 @@ def query_construction(request):
         #queryFile.write(str(printQuery) + "\n")
         #queryFile.close
 
-    else:
-        del printQuery[:]
+    #else:
+    #    del printQuery[:]
 
     del abstractList[:]
     return render(request, 'SARS/query_construction.html', context_dict)
@@ -62,6 +65,7 @@ def query_construction(request):
 
 def abstract_evaluation(request):
     printQuery[:]
+
     print "1"
     x = request.GET.getlist('data[]')
     for i in range(0, len(x), 1):
@@ -100,7 +104,8 @@ def abstract_evaluation(request):
             for i in listID:print i
 
             print "3"
-            
+
+            abstractList[:]
             for i in listID:
                 #relevanceList[str(i)] = 0
                 #print "4"
