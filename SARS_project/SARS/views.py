@@ -1,7 +1,7 @@
 from django.db.models import query
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from datetime import datetime
@@ -11,15 +11,12 @@ from SARS.forms import UserForm, UserProfileForm, QueryForm
 from SARS_project.settings import BASE_DIR
 
 import os
-import urllib
 import urllib2
-import re
-import webbrowser
 
-global printQuery
-printQuery = []
 global username
 username = None
+global printQuery
+printQuery = []
 global abstractList
 abstractList = []
 global relevanceList
@@ -36,9 +33,6 @@ abstractURL = baseURL+"efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 
 # getting the queries into a dictionary as long as sth has been typed
 def query_construction(request):
-    printQuery[:]
-    abstractList[:]
-
     form = QueryForm()
     getQueryRequest = request.POST.get('queryBox')
 
@@ -56,22 +50,21 @@ def query_construction(request):
         #queryFile.write(str(printQuery) + "\n")
         #queryFile.close
 
-    #else:
-    #    del printQuery[:]
+    else:
+        del printQuery[:]
 
     del abstractList[:]
     return render(request, 'SARS/query_construction.html', context_dict)
 
 
 def abstract_evaluation(request):
-    printQuery[:]
+    del printQuery[:]
+    del abstractList[:]
 
-    print "1"
     x = request.GET.getlist('data[]')
-    for i in range(0, len(x), 1):
+    for i in range(0, len(x)):
         print x[i]
         printQuery.append(x[i])
-    print "2"
     print printQuery
 
     if x is not 0:
@@ -80,7 +73,6 @@ def abstract_evaluation(request):
             for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + x[i]
 
             print searchURL
-            #webbrowser.open_new_tab(searchURL)
 
             wResp = urllib2.urlopen(searchURL)
             web_pg = wResp.read()
@@ -103,30 +95,15 @@ def abstract_evaluation(request):
                     
             for i in listID:print i
 
-            print "3"
-
-            abstractList[:]
+            del abstractList[:]
             for i in listID:
-                #relevanceList[str(i)] = 0
-                #print "4"
-
+                relevanceList[str(i)] = 0
                 searchURL = abstractURL + i
-                print "5"
-
                 wResp = urllib2.urlopen(searchURL)
-                print "6"
-
                 web_pg = wResp.read()[3:]
-                print "7"
-
                 abstractList.append(str(web_pg))
-                print "8"
 
-    print "9"
-    #context_dict = {'docID': relevanceList.keys(), 'abstracts': abstractList}
     context_dict = {'abstracts': abstractList}
-
-    print "10"
     return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
