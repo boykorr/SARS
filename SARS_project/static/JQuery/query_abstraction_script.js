@@ -35,10 +35,11 @@ $(document).ready(function(){
     $('button[name=clear]').click(function(){
        $('ol').empty();
        queries = [];
-       $('#list').append(queries.toString());
     });
 
+    //Passing queries array to python abstract evaluation
     $('button[name=search]').click(function(){
-        $.post("/SARS/abstractevaluation/", queries, function(response){alert(response)});
+        var new_data = ['a','b','c','d','e'];
+        $.get('/SARS/abstractevaluation/', {'data': queries},function(data){});
     });
 });

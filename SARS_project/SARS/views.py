@@ -61,12 +61,21 @@ def query_construction(request):
 
 
 def abstract_evaluation(request):
-    if printQuery:
+    printQuery[:]
+    print "1"
+    x = request.GET.getlist('data[]')
+    for i in range(0, len(x), 1):
+        print x[i]
+        printQuery.append(x[i])
+    print "2"
+    print printQuery
+
+    if x is not 0:
         if len(abstractList) is 0:
             searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=5&term=" + printQuery[0]
-            for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + printQuery[i]
-            # &usehistory=y Stores query in pubmed history server
+            for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + x[i]
 
+            print searchURL
             #webbrowser.open_new_tab(searchURL)
 
             wResp = urllib2.urlopen(searchURL)
@@ -89,15 +98,30 @@ def abstract_evaluation(request):
                     listID[i] = listID[i][1:-1]
                     
             for i in listID:print i
+
+            print "3"
             
             for i in listID:
-                relevanceList[str(i)] = 0
-                searchURL = abstractURL + i
-                wResp = urllib2.urlopen(searchURL)
-                web_pg = wResp.read()[3:]
-                abstractList.append(str(web_pg))
+                #relevanceList[str(i)] = 0
+                #print "4"
 
-    context_dict = {'docID': relevanceList.keys(), 'abstracts': abstractList}
+                searchURL = abstractURL + i
+                print "5"
+
+                wResp = urllib2.urlopen(searchURL)
+                print "6"
+
+                web_pg = wResp.read()[3:]
+                print "7"
+
+                abstractList.append(str(web_pg))
+                print "8"
+
+    print "9"
+    #context_dict = {'docID': relevanceList.keys(), 'abstracts': abstractList}
+    context_dict = {'abstracts': abstractList}
+
+    print "10"
     return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
