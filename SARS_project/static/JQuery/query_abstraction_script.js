@@ -39,7 +39,6 @@ $(document).ready(function(){
 
     //Passing queries array to python abstract evaluation
     $('button[name=search]').click(function(){
-        var new_data = ['a','b','c','d','e'];
         $.get('/SARS/abstractevaluation/', {'data': queries},function(data){});
     });
 });

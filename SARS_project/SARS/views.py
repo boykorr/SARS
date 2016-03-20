@@ -72,7 +72,7 @@ def abstract_evaluation(request):
 
     if x is not 0:
         if len(abstractList) is 0:
-            searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=5&term=" + printQuery[0]
+            searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=1&term=" + printQuery[0]
             for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + x[i]
 
             print searchURL
