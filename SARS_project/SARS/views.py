@@ -58,8 +58,8 @@ def query_construction(request):
 
 
 def abstract_evaluation(request):
-    del printQuery[:]
-    del abstractList[:]
+    #del printQuery[:]
+    #del abstractList[:]
 
     x = request.GET.getlist('data[]')
     for i in range(0, len(x)):
