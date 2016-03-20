@@ -9,7 +9,7 @@
     {% block body_block %}
         <h1>Construct a query</h1>
 
-        <form id="query_form" method="post" action="/SARS/">
+        <form id="query_form" method="post" action="">
 
             {% csrf_token %}
             {% for hidden in form.hidden_fields %}
@@ -30,8 +30,8 @@
 
         <!--adding search and clear all buttons-->
         <div style="display: inline-block">
-            <form method="GET" action = "/SARS/abstractevaluation/">
-                <input type="Submit" value="Search">
+            <form method="GET" action = "">
+                <button name="search" type="Submit" value="Search"></button>
             </form>
         </div>
 

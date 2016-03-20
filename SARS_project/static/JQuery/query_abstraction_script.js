@@ -1,45 +1,44 @@
 $(document).ready(function(){
     //Queries array
     var queries = [];
-    var count = 0;
 
     //When Add button is clicked, add contents of query box to list
     $('button[name=add]').click(function(){
         var toAdd = $('#id_queryBox').val();
         var Xbutton = '<button id="del" name="delete" type="button" value="">&#10006</button>';
         var Ebutton = '<button id="edit" name="edit" type="button" value="">Edit</button>';
-        $('#del').val(count);
-        $('#edit').val(count);
         queries.push(toAdd);
-        //$('ol').append(queries[0]);
-        //$('ol').append(queries[1]);
-        //$('ol').append(queries[2]);
-        count += 1;
         $('#list').append('<div><li>' + Xbutton + Ebutton + '<span>' + toAdd + '</span>' + '</li></div>');
-        //$('ol').append($('#del').attr("value"));
-        //$('#list').append($("#edit").attr("value"));
     });
 
-    //When 'X' button is clicked, query is removed
+    //When 'X' button is clicked, query is removed from page and array
     $(document).on('click', '#del', function(){
-        //delete queries[$(this).attr("value")];
         $(this).parent().remove();
-        queries.slice($(this).attr("value"));
-        $('#list').append(queries);
-        //delete queries[$(this).attr("value")];
+        var indexOfElementToRemove = queries.indexOf($(this).next().next().clone().html());
+        queries.splice(indexOfElementToRemove,1);
     });
 
    
     //When Edit button is clicked, query is changed to contents of query box
-    $(document).on('click', '#edit', function(){
-        var newString = $('input[name=queryBox]').val();
-        $(this).next().html(newString);
-        queries[$(this).attr("value")] = newString;
+    $(document).on('click', '#edit', function() {
+        //If new query (changed query) is not in queries array then change it
+        if (!(queries.contains($('input[name=queryBox]')))) {
+            var newString = $('input[name=queryBox]').val();
+            var indexOfElementToBeChanged = queries.indexOf($(this).next().clone().html());
+            queries[indexOfElementToBeChanged] = newString;
+            $(this).next().html(newString);
+            $('#list').append(queries.toString());
+        }
     });
 
     //When Clear All button is clicked, all queries are removed
     $('button[name=clear]').click(function(){
        $('ol').empty();
        queries = [];
+       $('#list').append(queries.toString());
+    });
+
+    $('button[name=search]').click(function(){
+        $.post("/SARS/abstractevaluation/", queries, function(response){alert(response)});
     });
 });
