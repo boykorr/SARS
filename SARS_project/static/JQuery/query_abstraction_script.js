@@ -22,13 +22,10 @@ $(document).ready(function(){
     //When Edit button is clicked, query is changed to contents of query box
     $(document).on('click', '#edit', function() {
         //If new query (changed query) is not in queries array then change it
-        if (!(queries.contains($('input[name=queryBox]')))) {
-            var newString = $('input[name=queryBox]').val();
-            var indexOfElementToBeChanged = queries.indexOf($(this).next().clone().html());
-            queries[indexOfElementToBeChanged] = newString;
-            $(this).next().html(newString);
-            $('#list').append(queries.toString());
-        }
+        var newString = $('input[name=queryBox]').val();
+        var indexOfElementToBeChanged = queries.indexOf($(this).next().clone().html());
+        queries[indexOfElementToBeChanged] = newString;
+        $(this).next().html(newString);
     });
 
     //When Clear All button is clicked, all queries are removed

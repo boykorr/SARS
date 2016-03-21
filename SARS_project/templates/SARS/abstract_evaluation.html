@@ -1,7 +1,11 @@
 {% extends 'SARS/base.html' %}
 {% load staticfiles %}
 
-{% block title %} Stage 2 {% endblock %}
+{% block title %} Abstract Pool {% endblock %}
+
+{% block head_block %}
+        <script type="text/javascript" src="{{ STATIC_URL }}JQuery/abstract_evaluation_script.js"></script>
+{% endblock %}
 
 {% block body_block %}
     <h1> Please tick all the relevant abstracts </h1>
@@ -10,8 +14,8 @@
         <button onclick="goBack()">Go Back</button>
             <script>
                  function goBack() {
-                 window.history.back();
-      }
+                    window.history.back();
+                 }
             </script>
     </div>
     

@@ -98,7 +98,6 @@ def abstract_evaluation(request):
             abstractList.append(str(web_pg))
 
     context_dict = {'abstracts': abstractList}
-    print abstractList
     return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
