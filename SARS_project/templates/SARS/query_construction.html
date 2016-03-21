@@ -22,14 +22,16 @@
                 {{ field }}
             {% endfor %}
 
-            <button name="add" type="button" value="OK">Add</button>
+            <form action="/SARS/abstractevaluation">
+                <button name="search" type="Submit">Search</button>
+            </form>
 
         </form>
 
-        <div style="height:1em"></div>
+        <!--<div style="height:1em"></div>
 
-        <!--adding search and clear all buttons-->
-        <div style="display: inline-block">
+        adding search and clear all buttons-->
+        <!--<div style="display: inline-block">
             <form action="/SARS/abstractevaluation">
                 <button name="search" type="Submit">Search</button>
             </form>
@@ -43,9 +45,7 @@
 
         <div style="height:1em"></div>
         <div style="position: relative;text-align: center;height:0.2em;background-color:black"></div>
-        <div style="height:1em"></div>
+        <div style="height:1em"></div>-->
 
-        <ol id="list">
-
-        </ol>
+        <ol id="list"></ol>
     {% endblock %}

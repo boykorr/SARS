@@ -66,7 +66,7 @@ def abstract_evaluation(request):
             printQuery.append(data[i])
         print printQuery
 
-        searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=1&term=" + printQuery[0]
+        searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=10000&term=" + printQuery[0]
         for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + printQuery[i]
         print searchURL
 
