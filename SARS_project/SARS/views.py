@@ -15,10 +15,14 @@ import urllib2
 
 global username
 username = None
+
 global printQuery
 printQuery = []
+global listID
+listID = []
 global abstractList
 abstractList = []
+
 global relevanceList
 relevanceList = {}
 
@@ -68,18 +72,33 @@ def advanced_query(request):
 
 
 def abstract_evaluation(request):
-    data = request.GET.getlist('data[]')
-    ##print request.POST.get('queryBox')
-    if len(data) is not 0:
-        #del printQuery[:]
-        for i in range(0, len(data)):
-            print data[i]
-            printQuery.append(data[i])
-        print printQuery
 
-        searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=10000&term=" + printQuery[0]
-        for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + printQuery[i]
-        print searchURL
+    if request.method == 'POST':
+        qString = request.POST.get('queryBox')
+        qString = qString.split()
+        print qString
+
+        del listID[:]
+        del abstractList[:]
+
+        searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=10&term="
+
+        if 'basic' in request.POST:
+            print "basic"
+            for s in qString: searchURL += s + "+"
+            print searchURL
+
+        else:
+            print "advanced"
+
+        #if form.is_valid():
+        #    cat = form.save(commit=True)
+        #    print cat, cat.slug
+        #    return index(request)
+        #else: print form.errors
+
+        #if len(data) is not 0:
+        #del printQuery[:]
 
         wResp = urllib2.urlopen(searchURL)
         web_pg = wResp.read()
@@ -98,22 +117,23 @@ def abstract_evaluation(request):
             else:
                 listID[i] = listID[i][1:-1]
 
-        #del abstractList[:]
-
         for i in listID:
             print i
             #relevanceList[str(i)] = 0
-            searchURL = abstractURL + i
+            searchURL = abstractURL + str(i)
             wResp = urllib2.urlopen(searchURL)
             web_pg = wResp.read()[3:]
             abstractList.append(str(web_pg))
+    else:
+        print "not a post request"
 
     context_dict = {'abstracts': abstractList}
     return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
 def document_evaluation(request):
-    context_dict = {'documentID': listID}
+    #context_dict = {'documentID': listID}
+    context_dict = {}
     return render(request, 'SARS/document_evaluation.html', context_dict)
 
 
