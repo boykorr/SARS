@@ -69,6 +69,7 @@ def advanced_query(request):
 
 def abstract_evaluation(request):
     data = request.GET.getlist('data[]')
+    ##print request.POST.get('queryBox')
     if len(data) is not 0:
         #del printQuery[:]
         for i in range(0, len(data)):

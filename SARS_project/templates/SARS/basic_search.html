@@ -9,7 +9,7 @@
     {% block body_block %}
         <h1>Construct a query</h1>
 
-        <form id="query_form" method="post" action="">
+        <form id="query_form" method="post" action="/SARS/abstractevaluation/">
 
             {% csrf_token %}
             {% for hidden in form.hidden_fields %}
@@ -22,9 +22,7 @@
                 {{ field }}
             {% endfor %}
 
-            <form action="/SARS/abstractevaluation">
-                <button name="search" type="Submit">Search</button>
-            </form>
+            <button name="search" type="Submit">Search</button>
 
         </form>
 
