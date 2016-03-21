@@ -1,0 +1,53 @@
+{% extends 'SARS/base.html' %}
+
+{% block title %} Query Construction {% endblock %}
+
+    {% block head_block %}
+        <script type="text/javascript" src="{{ STATIC_URL }}JQuery/basic_query_script.js"></script>
+    {% endblock %}
+
+    {% block body_block %}
+        <h1>Construct a query</h1>
+
+        <form id="query_form" method="post" action="">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}
+                {{ field }}
+            {% endfor %}
+
+            <form action="/SARS/abstractevaluation">
+                <button name="search" type="Submit">Search</button>
+            </form>
+
+        </form>
+
+        <p>Or you can use the <a href="/SARS/advanced_search">Advanced Search</a></p>
+
+        <!--<div style="height:1em"></div>
+
+        adding search and clear all buttons-->
+        <!--<div style="display: inline-block">
+            <form action="/SARS/abstractevaluation">
+                <button name="search" type="Submit">Search</button>
+            </form>
+        </div>
+
+        <div style="display: inline-block">
+            <form method="GET" action = "">
+                <button name="clear" type="button" value ="clear">Clear All</button>
+            </form>
+        </div>
+
+        <div style="height:1em"></div>
+        <div style="position: relative;text-align: center;height:0.2em;background-color:black"></div>
+        <div style="height:1em"></div>-->
+
+        <ol id="list"></ol>
+    {% endblock %}

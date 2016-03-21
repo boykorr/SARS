@@ -3,7 +3,7 @@
 {% block title %} Query Construction {% endblock %}
 
     {% block head_block %}
-        <script type="text/javascript" src="{{ STATIC_URL }}JQuery/query_abstraction_script.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}JQuery/basic_query_script.js"></script>
     {% endblock %}
 
     {% block body_block %}
@@ -28,10 +28,12 @@
 
         </form>
 
-        <!--<div style="height:1em"></div>
+        <p>Or you can use the <a href="/SARS/advanced_search">Advanced Search</a></p>
+
+        <div style="height:1em"></div>
 
         adding search and clear all buttons-->
-        <!--<div style="display: inline-block">
+        <div style="display: inline-block">
             <form action="/SARS/abstractevaluation">
                 <button name="search" type="Submit">Search</button>
             </form>
@@ -45,7 +47,7 @@
 
         <div style="height:1em"></div>
         <div style="position: relative;text-align: center;height:0.2em;background-color:black"></div>
-        <div style="height:1em"></div>-->
+        <div style="height:1em"></div>
 
         <ol id="list"></ol>
     {% endblock %}

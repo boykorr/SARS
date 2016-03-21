@@ -31,8 +31,13 @@ abstractURL = baseURL+"efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id="
 # downloadURL = "esummary.fcgi?db=pubmed&id="
 
 
+def index(request):
+    context_dict = {}
+    return render(request, 'SARS/index.html', context_dict)
+
+
 # getting the queries into a dictionary as long as sth has been typed
-def query_construction(request):
+def basic_query(request):
     form = QueryForm()
     getQueryRequest = request.POST.get('queryBox')
 
@@ -54,7 +59,12 @@ def query_construction(request):
         del printQuery[:]
 
     del abstractList[:]
-    return render(request, 'SARS/query_construction.html', context_dict)
+    return render(request, 'SARS/basic_search.html', context_dict)
+
+
+def advanced_query(request):
+    context_dict = {}
+    return render(request, 'SARS/advanced_search.html', context_dict)
 
 
 def abstract_evaluation(request):
