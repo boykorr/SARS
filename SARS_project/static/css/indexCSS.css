@@ -1,0 +1,44 @@
+#container {
+    width: 100%;
+    text-align: center;
+}
+
+#left {
+    float: left;
+    width: 500px;
+}
+
+#right {
+    float: right;
+    width: 500px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 1.4px;
+    border-bottom: solid 1px #000000;
+}
+
+h2 {
+    font-family: times-new-roman, Georgia, serif;
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    color: #000000;
+}
+
+.paragraphs {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #444444;
+    letter-spacing: 1.25px;
+    line-height: 1.5;
+    background: #EEEEEE;
+    padding: 5px;
+    margin: auto 15px;
+}

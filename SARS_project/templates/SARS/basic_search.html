@@ -22,11 +22,11 @@
                 {{ field }}
             {% endfor %}
 
-            <button name="search" type="Submit">Search</button>
+            <button name="basic" type="Submit">Search</button>
 
         </form>
 
-        <p>Or you can use the <a href="/SARS/advanced_search">Advanced Search</a></p>
+        <p>Or you can use the <a href="{% url 'basic_search' %}">Advanced Search</a></p>
 
         <!--<div style="height:1em"></div>
 

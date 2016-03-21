@@ -4,8 +4,28 @@
 
 {% block head_block %}
     <script type="text/javascript" src="{{ STATIC_URL }}JQuery/index_script.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/indexCSS.css">
 {% endblock %}
 
 {% block body_block %}
+    <h1>Welcome to SARS, m8s!</h1>
 
+    <h1>Please login to create systematic reviews and more.</h1>
+    <div id="container">
+        <div id="left" class="paragraphs">
+            <h2>What is YARS?</h2>
+            <p>
+                SARS is an online application which allows users
+                to create an account and build, save and edit
+                multiple research reviews.
+            </p>
+        </div>
+
+        <div id="right" class="paragraphs">
+            <h2>Another motheryucking heading.</h2>
+            <p>
+                Some more text about something.
+            </p>
+        </div>
+    </div>
 {% endblock %}
