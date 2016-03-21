@@ -58,52 +58,47 @@ def query_construction(request):
 
 
 def abstract_evaluation(request):
-    #del printQuery[:]
-    #del abstractList[:]
+    data = request.GET.getlist('data[]')
+    if len(data) is not 0:
+        #del printQuery[:]
+        for i in range(0, len(data)):
+            print data[i]
+            printQuery.append(data[i])
+        print printQuery
 
-    x = request.GET.getlist('data[]')
-    for i in range(0, len(x)):
-        print x[i]
-        printQuery.append(x[i])
-    print printQuery
+        searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=1&term=" + printQuery[0]
+        for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + printQuery[i]
+        print searchURL
 
-    if x is not 0:
-        if len(abstractList) is 0:
-            searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=1&term=" + printQuery[0]
-            for i in range(1, len(printQuery)):searchURL = searchURL + "+AND+" + x[i]
+        wResp = urllib2.urlopen(searchURL)
+        web_pg = wResp.read()
+        splitData = web_pg.split()
 
-            print searchURL
+        docNumber = splitData[11][1:-2]
+        print docNumber
 
+        global listID
+        listID = (splitData[18:(splitData.index("],"))])
+
+        n = len(listID)
+        for i in range(0, n):
+            if i < n-1:
+                listID[i] = listID[i][1:-2]
+            else:
+                listID[i] = listID[i][1:-1]
+
+        #del abstractList[:]
+
+        for i in listID:
+            print i
+            #relevanceList[str(i)] = 0
+            searchURL = abstractURL + i
             wResp = urllib2.urlopen(searchURL)
-            web_pg = wResp.read()
-            #print web_pg
-
-            splitData = web_pg.split()
-
-            docNumber = splitData[11][1:-2]
-            print docNumber
-
-            global listID
-            listID = (splitData[18:(splitData.index("],"))])
-
-            n = len(listID)
-            for i in range(0, n):
-                if i < n-1:
-                    listID[i] = listID[i][1:-2]
-                else:
-                    listID[i] = listID[i][1:-1]
-                    
-            for i in listID:print i
-
-            del abstractList[:]
-            for i in listID:
-                relevanceList[str(i)] = 0
-                searchURL = abstractURL + i
-                wResp = urllib2.urlopen(searchURL)
-                web_pg = wResp.read()[3:]
-                abstractList.append(str(web_pg))
+            web_pg = wResp.read()[3:]
+            abstractList.append(str(web_pg))
 
     context_dict = {'abstracts': abstractList}
+    print abstractList
     return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
