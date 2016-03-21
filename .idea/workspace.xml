@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="653a4ad4-1fb4-4fff-b0ad-ce99986301f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/db.sqlite3" afterPath="$PROJECT_DIR$/SARS_project/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/css/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/base.html.old" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/SARS/forms.py" afterPath="$PROJECT_DIR$/SARS_project/SARS/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/SARS/views.py" afterPath="$PROJECT_DIR$/SARS_project/SARS/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/static/css/SecondCSS.css" afterPath="$PROJECT_DIR$/SARS_project/static/css/SecondCSS.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html" />
     </list>
     <ignored path="SARS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bootstrap.min.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/bootstrap.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -106,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query_construction.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="query_construction.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4518002">
-              <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+            <state vertical-scroll-proportion="-8.823529">
+              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -618,14 +616,20 @@
       <option name="project" value="LOCAL" />
       <updated>1458564657829</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="New Bootstrap, Basic Search UI">
+      <created>1458586081779</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1458586081779</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -664,7 +668,8 @@
     <MESSAGE value="abstract jquery compatibility attempt 4 (index out of range error fix)" />
     <MESSAGE value="abstract jquery compatibility attempt 5 (index out of range error fix)" />
     <MESSAGE value="abstract jquery compatibility attempt 6 (index out of range error fix)" />
-    <option name="LAST_COMMIT_MESSAGE" value="abstract jquery compatibility attempt 6 (index out of range error fix)" />
+    <MESSAGE value="New Bootstrap, Basic Search UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Bootstrap, Basic Search UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1038,16 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/static/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.2058823">
@@ -1102,9 +1097,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4518002">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        <state vertical-scroll-proportion="-8.823529">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
