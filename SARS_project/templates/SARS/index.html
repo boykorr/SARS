@@ -8,9 +8,14 @@
 {% endblock %}
 
 {% block body_block %}
-    <h1>Welcome to SARS a Systematic Application Review Sideology </h1>
+    <h1>Welcome to SARS a Systematic Application Review Sideology</h1>
 
-    <h1>Please <a href="{% url 'registration_register' %}">register </a> or <a href="{% url 'auth_login' %}"> log in to begin.</h1>
+    {% if user.is_authenticated %}
+    <h1>Click 'My Reviews' to get started!</h1>
+    {% else %}
+    <h1>Please <a href="{% url 'registration_register' %}">register </a> or <a href="{% url 'auth_login' %}">log in</a> to begin.</h1>
+    {% endif %}
+
     <div id="container">
         <div id="left" class="paragraphs">
             <h2>What Is  Systematic Review? </h2>
