@@ -145,3 +145,8 @@ def successful_registration(request):
     queryFile.close()
 
     return HttpResponseRedirect('/SARS/')
+
+
+def user_guide(request):
+    context_dict = {}
+    return render(request, 'SARS/user_guide.html', context_dict)

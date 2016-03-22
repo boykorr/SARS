@@ -8,23 +8,38 @@
 {% endblock %}
 
 {% block body_block %}
-    <h1>Welcome to SARS, m8s!</h1>
+    <h1>Welcome to SARS a Systematic Application Review Sideology </h1>
 
-    <h1>Please login to create systematic reviews and more.</h1>
+    <h1>Please <a href="{% url 'registration_register' %}">register </a> or <a href="{% url 'auth_login' %}"> log in to begin.</h1>
     <div id="container">
         <div id="left" class="paragraphs">
-            <h2>What is YARS?</h2>
+            <h2>What Is  Systematic Review? </h2>
             <p>
-                SARS is an online application which allows users
-                to create an account and build, save and edit
-                multiple research reviews.
+                A systematic review is a type of literature review that
+                collects and critically analyzes multiple research studies
+                or papers. This is accomplished through deeming each piece
+                of data as relevant or not relevant to it's chosen subject.
+                Once completed the left over information is considered completely
+                worthy of time and effort. A review of existing studies is
+                often quicker and cheaper than embarking on a new study.
+                Get checkbox list values with jQuery
             </p>
         </div>
 
         <div id="right" class="paragraphs">
-            <h2>Another motheryucking heading.</h2>
+            <h2>Why They Are Needed.</h2>
             <p>
-                Some more text about something.
+                Systematic reviews of documentation and information is
+                incredibly valuable. With the completion of a systematic
+                review the knowledge that has passed the test of being
+                considered valuable information by the reviewers is now
+                deemed relevant to the topic it is based on. With this tedious
+                amount of reviewing the small amount that gets through is considered
+                to be true, fair and worth while information all else is now deemed,
+                basically, a waste of time and this saves people time when trying
+                to research and in some cases (especially medical) time is the most
+                valuable resource available.
+
             </p>
         </div>
     </div>

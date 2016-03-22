@@ -1,0 +1,45 @@
+{% extends 'SARS/base.html' %}
+
+{% block title %} Query Construction {% endblock %}
+
+{% block head_block %}
+    <script type="text/javascript" src="{{ STATIC_URL }}JQuery/index_script.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/indexCSS.css">
+{% endblock %}
+
+{% block body_block %}
+    <h1>SARS User Guide </h1>
+
+
+    <h2>Creating a Query </h2>
+    <p>
+        When you first begin a search box will be shown on screen
+        from here you can simply add query terms by typing them into
+        the search field and clicking search this will then display
+        abstracts of documents that share a topic with your search
+    </p>
+
+    <h2>Relevant Abstracts</h2>
+    <p>
+        Once the abstracts are on screen each will have it's own
+        checkbox. To deem an abstract as relevant reading information
+        simply check the boxes of those you find a common subject
+        with your initial searches.
+    </p>
+
+    <h2>Relevant Documents</h2>
+    <p>
+        after selecting all the relevant abstracts and continuing from
+        here you are taken to a new page that will supply you with the
+        documents of each of the abstracts you have chosen as relevant.
+        From here you can, again choose which of the documents contain
+        relevant information and which do not by means of the checkbox
+        system. Once complete you have now finished your first systematic
+        review and are now left with a list of documents that will supply
+        other users with relevant information in a much faster time than
+        you did, you are a good person for doing this.
+    </p>
+
+
+
+{% endblock %}
