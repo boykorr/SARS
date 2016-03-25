@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="653a4ad4-1fb4-4fff-b0ad-ce99986301f4" name="Default" comment="Removed files belonging to old base template&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/advanced_query_script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/document_evaluation_script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/document_results.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/document_results_script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/index_script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/css/abstractCSS.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/css/advancedsearchCSS.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/css/basicsearchCSS.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/css/documentCSS.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/css/documentCSS.css.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/css/documentresultsCSS.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/document_results.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/documentresults.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SARS_project/media/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SARS_project/static/css/FirstCSS.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SARS_project/static/css/SecondCSS.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SARS_project/static/images/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/base.html.old" afterPath="" />
+    <list default="true" id="653a4ad4-1fb4-4fff-b0ad-ce99986301f4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/reviews_script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/reviews.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/db.sqlite3" afterPath="$PROJECT_DIR$/SARS_project/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/SARS/forms.py" afterPath="$PROJECT_DIR$/SARS_project/SARS/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/SARS/models.py" afterPath="$PROJECT_DIR$/SARS_project/SARS/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/SARS/urls.py" afterPath="$PROJECT_DIR$/SARS_project/SARS/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/SARS/views.py" afterPath="$PROJECT_DIR$/SARS_project/SARS/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/static/JQuery/abstract_evaluation_script.js" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/abstract_evaluation_script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/static/JQuery/basic_query_script.js" afterPath="$PROJECT_DIR$/SARS_project/static/JQuery/basic_query_script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/static/css/indexCSS.css" afterPath="$PROJECT_DIR$/SARS_project/static/css/indexCSS.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/advanced_search.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/advanced_search.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/basic_search.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/basic_search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/index.html" afterPath="$PROJECT_DIR$/SARS_project/templates/SARS/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SARS_project/templates/SARS/documentresults.html" afterPath="$PROJECT_DIR$/SARS_project/static/css/reviewsCSS.css" />
     </list>
     <ignored path="SARS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,9 +36,53 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SARS_project/SARS/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.744186">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9127907">
+              <caret line="236" column="8" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="document_results.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/document_results.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.2058825">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="abstract_evaluation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-29.411764">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="abstract_evaluation_script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/abstract_evaluation_script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SARS_project/SARS/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.857142">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,9 +92,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -86,26 +109,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SARS_project/SARS/models.py" />
         <option value="$PROJECT_DIR$/SARS_project/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/query_abstraction_script.js" />
         <option value="$PROJECT_DIR$/SARS_project/static/css/SecondCSS.css" />
         <option value="$PROJECT_DIR$/SARS_project/static/css/baseCSS.css" />
         <option value="$PROJECT_DIR$/SARS_project/templates/SARS/base2.html" />
-        <option value="$PROJECT_DIR$/SARS_project/SARS/forms.py" />
         <option value="$PROJECT_DIR$/SARS_project/templates/SARS/query_construction.html" />
         <option value="$PROJECT_DIR$/SARS_project/SARS_project/urls.py" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/token.js" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/index_script.js" />
         <option value="$PROJECT_DIR$/SARS_project/templates/SARS/index.html" />
         <option value="$PROJECT_DIR$/SARS_project/static/css/documentCSS.css.js" />
-        <option value="$PROJECT_DIR$/SARS_project/SARS/urls.py" />
         <option value="$PROJECT_DIR$/SARS_project/SARS/documentresults.html" />
         <option value="$PROJECT_DIR$/SARS_project/templates/SARS/documentresults.html" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/document_results.js" />
         <option value="$PROJECT_DIR$/SARS_project/static/css/indexCSS.css" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/test.js" />
-        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/document_results_script.js" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/abstract_evaluation_script.js" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/document_evaluation_script.js" />
@@ -120,8 +139,15 @@
         <option value="$PROJECT_DIR$/SARS_project/templates/SARS/document_results.html" />
         <option value="$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html" />
         <option value="$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html" />
-        <option value="$PROJECT_DIR$/SARS_project/SARS/views.py" />
         <option value="$PROJECT_DIR$/SARS_project/static/JQuery/advanced_query_script.js" />
+        <option value="$PROJECT_DIR$/SARS_project/SARS/urls.py" />
+        <option value="$PROJECT_DIR$/SARS_project/SARS/models.py" />
+        <option value="$PROJECT_DIR$/SARS_project/static/JQuery/reviews_script.js" />
+        <option value="$PROJECT_DIR$/SARS_project/static/css/reviewsCSS.css" />
+        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/base.html" />
+        <option value="$PROJECT_DIR$/SARS_project/templates/SARS/reviews.html" />
+        <option value="$PROJECT_DIR$/SARS_project/SARS/forms.py" />
+        <option value="$PROJECT_DIR$/SARS_project/SARS/views.py" />
       </list>
     </option>
   </component>
@@ -313,6 +339,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SARS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SARS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SARS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SARS_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SARS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,7 +643,19 @@
       <option name="project" value="LOCAL" />
       <updated>1458936777057</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created required new files&#10;Updated URLS file to include new HTML pages&#10;Removed files belonging to old base template&#10;Completed Basic Search (HTML, CSS, JS)&#10;Completed Advanced Search (HTML, CSS, JS)&#10;Advanced Search search url string algorithm implemented in JS&#10;Removed useless DIVS and FORMS in HTML files&#10;Added &quot;Change background color to green on select&quot; feature&#10;Added ability for user to select the number of documents to return from query search&#10;Removed unused JS code&#10;Increased font size of list items of abstract, document and results pool&#10;Removed unused code in VIEWS&#10;Implemented advanced search query code in VIEWS&#10;Fixed document count overwrite refresh issue&#10;">
+      <created>1458943798316</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1458943798316</updated>
+    </task>
+    <task id="LOCAL-00011" summary=".">
+      <created>1458944540171</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1458944540171</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -604,6 +664,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -615,7 +676,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -645,28 +705,25 @@
     <MESSAGE value="New Bootstrap, Basic Search UI (attempt2)" />
     <MESSAGE value="index partial revert" />
     <MESSAGE value="csrf token jquery" />
-    <option name="LAST_COMMIT_MESSAGE" value="csrf token jquery" />
+    <MESSAGE value="Created required new files&#10;Updated URLS file to include new HTML pages&#10;Removed files belonging to old base template&#10;Completed Basic Search (HTML, CSS, JS)&#10;Completed Advanced Search (HTML, CSS, JS)&#10;Advanced Search search url string algorithm implemented in JS&#10;Removed useless DIVS and FORMS in HTML files&#10;Added &quot;Change background color to green on select&quot; feature&#10;Added ability for user to select the number of documents to return from query search&#10;Removed unused JS code&#10;Increased font size of list items of abstract, document and results pool&#10;Removed unused code in VIEWS&#10;Implemented advanced search query code in VIEWS&#10;Fixed document count overwrite refresh issue&#10;" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/urls.py">
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/document_evaluation.html">
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -677,6 +734,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +742,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -706,6 +766,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -713,36 +774,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -764,6 +798,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -802,13 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15697674">
-          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -830,32 +858,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/SARS_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.428571">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6976744">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/token.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1731844">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.571428">
-          <caret line="14" column="77" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -870,6 +877,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,13 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.117647">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/document_results_script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1396648">
@@ -901,31 +902,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/abstract_evaluation_script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/document_evaluation_script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8324022">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/basic_query_script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.083798885">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/basic_search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82578397">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -940,6 +921,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5516841">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -947,13 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6678281">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.911764">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -968,6 +943,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.911764">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -975,13 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.32353">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/document_results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.911764">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1008,11 +977,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS_project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.285714">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/basic_query_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/basic_search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.264706">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0872093">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/static/css/reviewsCSS.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.647058">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="42" column="81" selection-start-line="42" selection-start-column="81" selection-end-line="42" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-35.714287">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/reviews_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/reviews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-40.764706">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.4">
+          <caret line="16" column="96" selection-start-line="16" selection-start-column="96" selection-end-line="16" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/SARS/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.857142">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/static/JQuery/abstract_evaluation_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/abstract_evaluation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.411764">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SARS_project/templates/SARS/document_results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.2058825">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SARS_project/SARS/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.744186">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.9127907">
+          <caret line="236" column="8" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

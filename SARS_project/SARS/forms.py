@@ -1,9 +1,20 @@
 from django import forms
 from django.contrib.auth.models import User
-from SARS.models import Query
-from SARS.models import UserProfile
+from SARS.models import Query, UserProfile, Review
 from django.forms import ModelForm, Textarea
-#from django.contrib.postgres.forms import SimpleArrayField
+
+
+class ReviewForm(forms.ModelForm):
+    title = forms.CharField(max_length=100, help_text="Title: ") #forms.CharField(max_length=100)
+    description = forms.CharField(widget=forms.Textarea(attrs={'rows':'8', 'cols':'24'}), max_length=500, help_text="Description: ") #widget=forms.Textarea
+    pool_size = forms.IntegerField(widget=forms.HiddenInput()) #forms.NumberInput()
+    abstracts_judged = forms.IntegerField(widget=forms.HiddenInput()) #forms.NumberInput()
+    documents_judged = forms.IntegerField(widget=forms.HiddenInput()) #forms.NumberInput()
+
+    class Meta:
+        model = Review
+        field = ('title', 'description',)
+        exclude = ('user', 'date_started', 'pool_size', 'abstracts_judged', 'documents_judged',)
 
 
 class QueryForm(forms.ModelForm):

@@ -4,9 +4,10 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+import datetime
 
-from SARS.models import Query, UserProfile
-from SARS.forms import UserForm, UserProfileForm, QueryForm
+from SARS.models import Query, UserProfile, Review
+from SARS.forms import UserForm, UserProfileForm, QueryForm, ReviewForm
 from SARS_project.settings import BASE_DIR
 
 import os
@@ -26,6 +27,8 @@ global docNumber
 docNumber = 0
 global finalDocNumber
 finalDocNumber = 0
+global title
+title = ""
 
 path = os.path.join(BASE_DIR, 'userQueries')
 
@@ -43,6 +46,10 @@ def index(request):
 
 # getting the queries into a dictionary as long as sth has been typed
 def basic_query(request):
+    if request.method == "POST":
+        review = Review.objects.create(user=request.user, title=request.POST.get('title'), description=request.POST.get('description'), date_started=datetime.datetime.now())
+        review.save()
+
     form = QueryForm()
     getQueryRequest = request.POST.get('queryBox')
 
@@ -62,6 +69,27 @@ def basic_query(request):
 
 def advanced_query(request):
     return render(request, 'SARS/advanced_search.html')
+
+
+def reviews(request):
+    if request.method == "POST":
+        global title
+        title = request.POST.get('title')
+        data = request.POST.get('operation')
+        if data == 'delete':
+            review = Review.objects.filter(user=request.user, title=request.POST.get('title'))
+            review.delete()
+
+        if data =='edit':
+            review = Review.objects.get(user=request.user, title=request.POST.get('title'))
+            review.title = request.POST.get('editTitle')
+            review.description = request.POST.get('editDescription')
+            review.save()
+
+    form = ReviewForm()
+    reviews = Review.objects.filter(user=request.user)
+    context_dict = {'form':form, 'reviews':reviews}
+    return render(request, 'SARS/reviews.html', context_dict)
 
 
 def abstract_evaluation(request):
@@ -198,13 +226,12 @@ def document_results(request):
 
 def successful_registration(request):
     username = request.user.get_username()
-
-    file = os.path.join(path, username + ".txt")
-    queryFile = open(file, "w")
-    queryFile.close()
-
     return HttpResponseRedirect('/SARS/')
 
 
 def user_guide(request):
     return render(request, 'SARS/user_guide.html')
+
+
+def save_review(request):
+    x= 0

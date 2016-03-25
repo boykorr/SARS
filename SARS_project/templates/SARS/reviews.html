@@ -1,0 +1,65 @@
+{% extends 'SARS/base.html' %}
+
+{% block title %} Reviews {% endblock %}
+
+{% block head_block %}
+    <script type="text/javascript" src="{{ STATIC_URL }}JQuery/reviews_script.js"></script>
+    <link href="{{ STATIC_URL }}css/reviewsCSS.css" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+    <button id="create" class = "btn btn-primary" name="create" type="Submit">Create a review</button>
+
+    <div id="createFields">
+        {% csrf_token %}
+
+        <form id="query_form" method="post" action="/SARS/basicsearch/">
+            {% csrf_token %}
+            <div id="createContainer">
+
+                {% for field in form.visible_fields %}
+                    {{ field.errors }}
+                    {{ field.help_text }}
+                    {{ field }}
+                    <br>
+                {% endfor %}
+
+                <button name="create" class="btn btn-primary" type="Submit">Build a query</button>
+            </div>
+        </form>
+
+        <h1>Your reviews</h1>
+        <button id="edit" class = "btn btn-primary" name="edit" type="Submit">Edit a review</button>
+
+        <div id="editContainer">
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}
+                {{ field }}
+                <br>
+            {% endfor %}
+
+            <button id="editReview" name="editReview" class="btn btn-primary" type="Submit">Edit</button>
+            <button id="delReview" name="delReview" class="btn btn-primary" type="Submit">Del</button>
+        </div>
+
+        <div id="outer">
+            <table id="table" border="1">
+                <td>Title</td>
+                <td>Description</td>
+                <td>Date started</td>
+                <td>Pool size</td>
+                {% for review in reviews %}
+                    <tr>
+                        <td>{{ review.title }}</td>
+                        <td>{{ review.description }}</td>
+                        <td>{{ review.date_started }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <ol id="list"></ol>
+{% endblock %}

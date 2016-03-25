@@ -1,0 +1,40 @@
+#createContainer {
+    background: #EEEEEE;
+    width: 100%;
+}
+
+#editContainer {
+    background: #EEEEEE;
+    width: 100%;
+}
+
+#id_description {
+    height: 60px;
+}
+
+#outer {
+    height: 10em;
+    position: relative;
+}
+
+#table{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.tableHeaders{
+    text-decoration: underline;
+}
+
+table tbody tr:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.highlighted{
+    background-color: lightblue;
+}

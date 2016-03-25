@@ -40,7 +40,7 @@
                         <li><a href="{% url 'user_guide' %}">User Guide</a></li>
                         {% if user.is_authenticated %}
                             <li><a href="#profile">Profile</a></li>
-                            <li><a href="#reviews">My Reviews</a></li>
+                            <li><a href="{% url 'reviews' %}">My Reviews</a></li>
                             <li><a href="{% url 'basic_search' %}">Search</a></li>
                             <li><a href="{% url 'auth_logout' %}?next=/SARS/">Logout</a></li><br />
                         {% else %}
