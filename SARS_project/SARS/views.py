@@ -27,8 +27,6 @@ global docNumber
 docNumber = 0
 global finalDocNumber
 finalDocNumber = 0
-global title
-title = ""
 
 path = os.path.join(BASE_DIR, 'userQueries')
 
@@ -231,7 +229,3 @@ def successful_registration(request):
 
 def user_guide(request):
     return render(request, 'SARS/user_guide.html')
-
-
-def save_review(request):
-    x= 0
