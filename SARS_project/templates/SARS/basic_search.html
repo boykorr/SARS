@@ -2,50 +2,32 @@
 
 {% block title %} Query Construction {% endblock %}
 
-    {% block head_block %}
-        <script type="text/javascript" src="{{ STATIC_URL }}JQuery/basic_query_script.js"></script>
-    {% endblock %}
+{% block head_block %}
+    <link href="{{ STATIC_URL }}css/basicsearchCSS.css" rel="stylesheet">
+    <script type="text/javascript" src="{{ STATIC_URL }}JQuery/basic_query_script.js"></script>
+{% endblock %}
 
-    {% block body_block %}
-        <h1>Construct a query</h1>
+{% block body_block %}
+    <h1>Basic Query Search</h1>
 
-        <form id="query_form" method="post" action="/SARS/abstractevaluation/">
+    <form id="query_form" method="post" action="/SARS/abstractevaluation/">
 
-            {% csrf_token %}
-            {% for hidden in form.hidden_fields %}
-                {{ hidden }}
-            {% endfor %}
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
 
-            {% for field in form.visible_fields %}
-                {{ field.errors }}
-                {{ field.help_text }}
-                {{ field }}
-            {% endfor %}
+        {% for field in form.visible_fields %}
+            {{ field.errors }}
+            {{ field.help_text }}
+            {{ field }}
+        {% endfor %}
 
-            <button name="basic" type="Submit">Search</button>
-
-        </form>
-
-        <p>Or you can use the <a href="{% url 'basic_search' %}">Advanced Search</a></p>
-
-        <!--<div style="height:1em"></div>
-
-        adding search and clear all buttons-->
-        <!--<div style="display: inline-block">
-            <form action="/SARS/abstractevaluation">
-                <button name="search" type="Submit">Search</button>
-            </form>
+        <button name="basic" type="Submit">Search</button>
+        <div id="retDiv">
+            Number of documents to return: <input type="number" name="quantity" min="1" value="10">
         </div>
+    </form>
 
-        <div style="display: inline-block">
-            <form method="GET" action = "">
-                <button name="clear" type="button" value ="clear">Clear All</button>
-            </form>
-        </div>
-
-        <div style="height:1em"></div>
-        <div style="position: relative;text-align: center;height:0.2em;background-color:black"></div>
-        <div style="height:1em"></div>-->
-
-        <ol id="list"></ol>
-    {% endblock %}
+    <p>Or you can use the <a href="{% url 'advanced_search' %}">Advanced Search</a>!</p>
+{% endblock %}

@@ -1,0 +1,41 @@
+#title{
+    cursor: pointer;
+    display: block;
+    background: #e0dee1;
+    border-radius: 2px;
+    border: 2px solid #b4b4b4;
+    text-align: start;
+    padding-left: 1em;
+}
+#title + input{
+    display: none;
+}
+#title + input + div{
+    display: none;
+}
+#title + input:checked + div{
+    display: block;
+}
+#abstract{
+    border: 0.15em solid #3c3a38;
+}
+#ctrl_button{
+    display:inline-block;
+}
+#underline{
+    position: relative;
+    text-align: center;
+    height:0.2em;
+    background-color:black;
+    margin: 1em;
+}
+#docCount{
+    font-size: 20px;
+}
+input[name=docCheckbox]{
+    transform: scale(1.5);
+}
+li[id=doc]{
+    margin-bottom: 1em;
+    font-size: 16px;
+}

@@ -1,0 +1,23 @@
+#underline{
+    position: relative;
+    text-align: center;
+    height:0.2em;
+    background-color:black;
+    margin: 1em;
+}
+div[id=query_container] {
+    margin-top: 2em;
+}
+ol[id=query_list] {
+
+}
+li[id=query_item] {
+    margin-bottom: 0.2em;
+}
+#ctrl_btn {
+    display: inline-block;
+}
+div[id=retDiv] {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}

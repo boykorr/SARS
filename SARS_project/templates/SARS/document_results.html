@@ -1,0 +1,34 @@
+{% extends 'SARS/base.html' %}
+{% load staticfiles %}
+
+{% block title %} Document Pool {% endblock %}
+
+{% block head_block %}
+    <link href="{{ STATIC_URL }}css/documentresultsCSS.css" rel="stylesheet">
+    <script type="text/javascript" src="{{ STATIC_URL }}JQuery/document_results_script.js"></script>
+{% endblock %}
+
+{% block body_block %}
+    <h1>Final Results</h1>
+
+    <div id="ctrl_button">
+        <button id="btn_goBack">Go Back</button>
+    </div>
+
+    <div id="docCount">
+        Number of Documents returned: {{ docCount }}
+        <div id="underline"></div>
+    </div>
+
+    <form>
+        <ol>
+            {% for document in results %}
+                <li id="doc">
+                    <div>
+                        <a href="{{ document.url }}">{{ document.title }}</a>
+                    </div>
+                </li><br>
+            {% endfor %}
+        </ol>
+    </form>
+{% endblock %}

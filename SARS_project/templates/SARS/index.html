@@ -11,9 +11,9 @@
     <h1>Welcome to SARS a Systematic Application Review Sideology</h1>
 
     {% if user.is_authenticated %}
-    <h1>Click 'My Reviews' to get started!</h1>
+        <h1>Click 'My Reviews' to get started!</h1>
     {% else %}
-    <h1>Please <a href="{% url 'registration_register' %}">register </a> or <a href="{% url 'auth_login' %}">log in</a> to begin.</h1>
+        <h1>Please <a href="{% url 'registration_register' %}">register </a> or <a href="{% url 'auth_login' %}">log in</a> to begin.</h1>
     {% endif %}
 
     <div id="container">
@@ -27,7 +27,6 @@
                 Once completed the left over information is considered completely
                 worthy of time and effort. A review of existing studies is
                 often quicker and cheaper than embarking on a new study.
-                Get checkbox list values with jQuery
             </p>
         </div>
 

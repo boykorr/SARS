@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from datetime import datetime
 
 from SARS.models import Query, UserProfile
 from SARS.forms import UserForm, UserProfileForm, QueryForm
@@ -13,18 +12,20 @@ from SARS_project.settings import BASE_DIR
 import os
 import urllib2
 
-global username
-username = None
-
 global printQuery
 printQuery = []
 global listID
 listID = []
-global abstractList
-abstractList = []
-
-global relevanceList
-relevanceList = {}
+global documentDict
+documentDict = []
+global documentPool
+documentPool = []
+global documentResults
+documentResults = []
+global docNumber
+docNumber = 0
+global finalDocNumber
+finalDocNumber = 0
 
 path = os.path.join(BASE_DIR, 'userQueries')
 
@@ -53,57 +54,46 @@ def basic_query(request):
     if request.user.is_authenticated():
         username = request.user.get_username()
 
-        #file = os.path.join(path, username + ".txt")
-        #queryFile = open(file,"w")
-        #queryFile.write("Queries:\n")
-        #queryFile.write(str(printQuery) + "\n")
-        #queryFile.close
-
     else:
         del printQuery[:]
 
-    del abstractList[:]
     return render(request, 'SARS/basic_search.html', context_dict)
 
 
 def advanced_query(request):
-    context_dict = {}
-    return render(request, 'SARS/advanced_search.html', context_dict)
+    return render(request, 'SARS/advanced_search.html')
 
 
 def abstract_evaluation(request):
-
     if request.method == 'POST':
-        qString = request.POST.get('queryBox')
-        qString = qString.split()
-        print qString
-
         del listID[:]
-        del abstractList[:]
+        del documentDict[:]
 
-        searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=10&term="
+        quantity = request.POST.get('quantity')
+        searchURL = baseURL + "esearch.fcgi?db=pubmed&retmode=json&retmax=" + quantity + "&term="
 
         if 'basic' in request.POST:
             print "basic"
+
+            qString = request.POST.get('queryBox')
+            qString = qString.split()
+            print qString
+
             for s in qString: searchURL += s + "+"
             print searchURL
 
         else:
             print "advanced"
-
-        #if form.is_valid():
-        #    cat = form.save(commit=True)
-        #    print cat, cat.slug
-        #    return index(request)
-        #else: print form.errors
-
-        #if len(data) is not 0:
-        #del printQuery[:]
+            qString = request.POST.get("the_docs")
+            print qString
+            searchURL += qString
+            print searchURL
 
         wResp = urllib2.urlopen(searchURL)
         web_pg = wResp.read()
         splitData = web_pg.split()
 
+        global docNumber
         docNumber = splitData[11][1:-2]
         print docNumber
 
@@ -117,24 +107,93 @@ def abstract_evaluation(request):
             else:
                 listID[i] = listID[i][1:-1]
 
-        for i in listID:
-            print i
-            #relevanceList[str(i)] = 0
-            searchURL = abstractURL + str(i)
+        for docID in listID:
+            print docID
+            searchURL = abstractURL + str(docID)
             wResp = urllib2.urlopen(searchURL)
-            web_pg = wResp.read()[3:]
-            abstractList.append(str(web_pg))
+            web_pg = wResp.read()[4:]
+
+            splitData = web_pg.split("\n")
+            title = ""
+            for i in range(0, len(splitData)):
+                if splitData[i] is "":
+                    for j in range(i+1, len(splitData)):
+                        if (splitData[j]!=""):
+                            title += splitData[j] + " "
+                        else:
+                            break
+                    break
+            print title
+            documentDict.append({"id": docID, "title": title, "summary": str(web_pg)})
     else:
         print "not a post request"
 
-    context_dict = {'abstracts': abstractList}
+    context_dict = {'docCount': docNumber, 'abstracts': documentDict}
     return render(request, 'SARS/abstract_evaluation.html', context_dict)
 
 
 def document_evaluation(request):
-    #context_dict = {'documentID': listID}
-    context_dict = {}
+    if request.method == 'POST':
+        print "DOCUMENT POST"
+
+        data = request.POST.get('the_docs')
+        data = data.split("/")
+        data = data[:-1]
+
+        if data[0] == "R":
+            print "REFRESH TOKEN"
+
+            del documentPool[:]
+
+            global docNumber
+            docNumber = len(data) - 1
+            print docNumber
+
+            for docID in data:
+                for doc in documentDict:
+                    if docID == doc["id"]:
+                        documentPool.append({
+                            "id": docID,
+                            "title": doc["title"],
+                            "url": "https://www.ncbi.nlm.nih.gov/pubmed/" + str(docID)
+                        })
+                        break
+
+    elif request.method == 'GET':
+        print "GET"
+
+    context_dict = {'docCount': docNumber, 'documents': documentPool}
     return render(request, 'SARS/document_evaluation.html', context_dict)
+
+
+def document_results(request):
+    print "document results"
+    if request.method == 'POST':
+        del documentResults[:]
+
+        print "RESULTS POST"
+        data = request.POST.get('the_docs')
+        print data
+
+        data = data.split("/")
+        data = data[:-1]
+        print data
+
+        global finalDocNumber
+        finalDocNumber = len(data)
+        print finalDocNumber
+
+        for docID in data:
+            for doc in documentPool:
+                if docID == doc["id"]:
+                    documentResults.append(doc)
+                    break
+
+    else:
+        print "GET"
+
+    context_dict = {'docCount': finalDocNumber, 'results': documentResults}
+    return render(request, 'SARS/document_results.html', context_dict)
 
 
 def successful_registration(request):
@@ -148,5 +207,4 @@ def successful_registration(request):
 
 
 def user_guide(request):
-    context_dict = {}
-    return render(request, 'SARS/user_guide.html', context_dict)
+    return render(request, 'SARS/user_guide.html')

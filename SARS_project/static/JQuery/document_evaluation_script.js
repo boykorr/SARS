@@ -57,18 +57,18 @@ $(document).ready(function(){
         window.history.back();
     });
 
-    $("button[id=btn_proceed]").click(function(){
-        var docsAccepted = "R/";
+    $("button[id=btn_proceed]").click(function(event){
+        var docsAccepted = "";
         $( "input[name=docCheckbox]:checked" ).each(function() {
             docsAccepted += $( this ).val() + "/";
         });
 
         $.ajax({
-            url: '/SARS/documentevaluation/',
+            url: '/SARS/documentresults/',
             type: 'POST',
             data : { the_docs : docsAccepted },
             success: function() {
-                window.location = '/SARS/documentevaluation/';
+                window.location = '/SARS/documentresults/';
             }
         });
     });

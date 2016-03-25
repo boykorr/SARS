@@ -2,52 +2,74 @@
 
 {% block title %} Query Construction {% endblock %}
 
-    {% block head_block %}
-        <script type="text/javascript" src="{{ STATIC_URL }}JQuery/basic_query_script.js"></script>
-    {% endblock %}
+{% block head_block %}
+    <link href="{{ STATIC_URL }}css/advancedsearchCSS.css" rel="stylesheet">
+    <script type="text/javascript" src="{{ STATIC_URL }}JQuery/advanced_query_script.js"></script>
+{% endblock %}
 
-    {% block body_block %}
-        <h1>Construct a query</h1>
+{% block body_block %}
+    <h1>Advanced Query Search</h1>
+    <p>Or go back to our <a href="{% url 'basic_search' %}">Basic Search</a>!</p>
 
-        <form id="query_form" method="post" action="">
+    <button class="ctrl_btn" id="clear_all">Clear All</button>
+    <button class="ctrl_btn" id="search">Search</button>
 
-            {% csrf_token %}
-            {% for hidden in form.hidden_fields %}
-                {{ hidden }}
-            {% endfor %}
+    <div id="retDiv">
+        Number of documents to return: <input type="number" name="quantity" min="1" value="10">
+    </div>
 
-            {% for field in form.visible_fields %}
-                {{ field.errors }}
-                {{ field.help_text }}
-                {{ field }}
-            {% endfor %}
+    <div id="underline"></div>
 
-            <form action="/SARS/abstractevaluation">
-                <button name="advanced" type="Submit">Search</button>
-            </form>
+    <div id="query_container">
+        <ol id="query_list">
+            <li id="query_item">
+                <select id="query_property">
+                    <option value="All">All Fields</option>
+                    <option value="Affiliation">Affiliation</option>
+                    <option value="Author">Author</option>
+                    <option value="Author+-+Corporate">Author - Corporate</option>
+                    <option value="Author+-+First">Author - First</option>
+                    <option value="Author+-+Full">Author - Full</option>
+                    <option value="Author+-+Identifier">Author - Identifier</option>
+                    <option value="Author+-+Last">Author - Last</option>
+                    <option value="Book">Book</option>
+                    <option value="Date+-+Completion">Date - Completion</option>
+                    <option value="Date+-+Create">Date - Create</option>
+                    <option value="Date+-+Entrez">Date - Entrez</option>
+                    <option value="Date+-+MeSH">Date - MeSH</option>
+                    <option value="Date+-+Modification">Date - Modification</option>
+                    <option value="Date+-+Publication">Date - Publication</option>
+                    <option value="EC%2FRN+Number">EC/RN Number</option>
+                    <option value="Editor">Editor</option>
+                    <option value="Filter">Filter</option>
+                    <option value="Grant+Number">Grant Number</option>
+                    <option value="ISBN">ISBN</option>
+                    <option value="Investigator">Investigator</option>
+                    <option value="Investigator+-+Full">Investigator - Full</option>
+                    <option value="Issue">Issue</option>
+                    <option value="Journal">Journal</option>
+                    <option value="Language">Language</option>
+                    <option value="Location+ID">Location ID</option>
+                    <option value="MeSH+Major+Topic">MeSH Major Topic</option>
+                    <option value="MeSH+Subheading">MeSH Subheading</option>
+                    <option value="MeSH+Terms">MeSH Terms</option>
+                    <option value="Other+Term">Other Term</option>
+                    <option value="Pagination">Pagination</option>
+                    <option value="Pharmacological+Action">Pharmacological Action</option>
+                    <option value="Publication+Type">Publication Type</option>
+                    <option value="Publisher">Publisher</option>
+                    <option value="Secondary+Source+ID">Secondary Source ID</option>
+                    <option value="Subject+-+Personal+Name">Subject - Personal Name</option>
+                    <option value="Supplementary+Concept">Supplementary Concept</option>
+                    <option value="Text+Word">Text Word</option>
+                    <option value="Title">Title</option>
+                    <option value="Title%2FAbstract">Title/Abstract</option>
+                    <option value="Transliterated+Title">Transliterated Title</option>
+                    <option value="Volume">Volume</option>
+                </select>
 
-        </form>
-
-        <p>Or you can use the <a href="/SARS/advanced_search">Advanced Search</a></p>
-
-        <div style="height:1em"></div>
-
-        adding search and clear all buttons-->
-        <div style="display: inline-block">
-            <form action="/SARS/abstractevaluation">
-                <button name="search" type="Submit">Search</button>
-            </form>
-        </div>
-
-        <div style="display: inline-block">
-            <form method="GET" action = "">
-                <button name="clear" type="button" value ="clear">Clear All</button>
-            </form>
-        </div>
-
-        <div style="height:1em"></div>
-        <div style="position: relative;text-align: center;height:0.2em;background-color:black"></div>
-        <div style="height:1em"></div>
-
-        <ol id="list"></ol>
-    {% endblock %}
+                <input id="query_input" size="90">
+            </li>
+        </ol>
+    </div>
+{% endblock %}

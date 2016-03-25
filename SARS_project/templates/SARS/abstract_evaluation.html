@@ -4,41 +4,37 @@
 {% block title %} Abstract Pool {% endblock %}
 
 {% block head_block %}
-        <script type="text/javascript" src="{{ STATIC_URL }}JQuery/abstract_evaluation_script.js"></script>
+    <link href="{{ STATIC_URL }}css/abstractCSS.css" rel="stylesheet">
+    <script type="text/javascript" src="{{ STATIC_URL }}JQuery/abstract_evaluation_script.js"></script>
 {% endblock %}
 
 {% block body_block %}
-    <h1> Please tick all the relevant abstracts </h1>
-    <!--go back and next buttons-->
-    <div style="display:inline-block">
-        <button onclick="goBack()">Go Back</button>
-            <script>
-                 function goBack() {
-                    window.history.back();
-                 }
-            </script>
-    </div>
-    
-    <div style="display:inline-block">
-        <form method="link" action = "/SARS/documentevaluation/">
-            <input type="Submit" value="Next">
-        </form>
-    </div>
-    
-    <div style="height:1em"></div>
-    <div style="position: relative;text-align: center;height:0.2em;background-color:black"></div>
-    <div style="height:1em"></div>
-    
-    <form>
-       <ol>
-            {%  for abstract in abstracts  %}
-                <li style="border: 2px solid black">
-                        <p>
-                            <input type="checkbox" name="checkbox" value="value"/>{{ abstract }}
-                        </p>
-                </li><br>
-            {% endfor %}
-       </ol>
-    </form>
+    <h1>Abstract Pool</h1>
+    <h4>Please tick all the relevant abstracts, and click proceed to go to the document pool. Click the document titles to view more information.</h4>
 
-    {% endblock %}
+    <div id="docCount">
+        Total number of possible documents: {{ docCount }}
+    </div>
+
+    <div id="ctrl_button">
+        <button id="btn_goBack">Go Back</button>
+        <button id="btn_proceed">Proceed</button>
+    </div>
+
+    <div id="underline"></div>
+
+    <ol id="query_list">
+        {% for document in abstracts %}
+            <li id="doc">
+                <div id="container">
+                    <label id="title" for="{{forloop.counter}}">
+                        <input name="docCheckbox" type="checkbox" value="{{document.id}}"/>
+                        {{ document.title }}
+                    </label>
+                    <input id="{{forloop.counter}}" type="checkbox">
+                    <div id="abstract"><TEXTAREA NAME="summary" ROWS="40" COLS="80" disabled>{{ document.summary }}</TEXTAREA></div>
+                </div>
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock %}
